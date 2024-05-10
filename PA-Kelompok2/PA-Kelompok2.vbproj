@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMenu.Designer.vb">
+      <DependentUpon>AdminMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Anime.Designer.vb">
       <DependentUpon>Anime.vb</DependentUpon>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="Utils.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Anime.resx">
       <DependentUpon>Anime.vb</DependentUpon>
     </EmbeddedResource>
