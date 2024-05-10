@@ -82,6 +82,12 @@
     <Compile Include="Anime.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AnimeUpdate.Designer.vb">
+      <DependentUpon>AnimeUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnimeUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
@@ -110,6 +116,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Anime.resx">
       <DependentUpon>Anime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimeUpdate.resx">
+      <DependentUpon>AnimeUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
