@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anime.Designer.vb">
+      <DependentUpon>Anime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anime.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
@@ -101,6 +107,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Anime.resx">
+      <DependentUpon>Anime.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
