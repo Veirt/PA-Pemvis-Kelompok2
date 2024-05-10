@@ -3,4 +3,9 @@ Module Session
     Public UserId
     Public Username
     Public Role
+    Public Sub Logout()
+        Session.UserId = Nothing
+        Session.Username = Nothing
+        Session.Role = Nothing
+    End Sub
 End Module

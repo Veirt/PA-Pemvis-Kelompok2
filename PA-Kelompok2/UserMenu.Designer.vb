@@ -29,6 +29,7 @@ Partial Class UserMenu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnRead
@@ -96,12 +97,24 @@ Partial Class UserMenu
         Me.Panel4.Size = New System.Drawing.Size(12, 452)
         Me.Panel4.TabIndex = 11
         '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnLogOut.ForeColor = System.Drawing.Color.White
+        Me.btnLogOut.Location = New System.Drawing.Point(655, 391)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(128, 41)
+        Me.btnLogOut.TabIndex = 12
+        Me.btnLogOut.Text = "Log Out"
+        Me.btnLogOut.UseVisualStyleBackColor = False
+        '
         'UserMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -125,4 +138,5 @@ Partial Class UserMenu
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents btnLogOut As Button
 End Class

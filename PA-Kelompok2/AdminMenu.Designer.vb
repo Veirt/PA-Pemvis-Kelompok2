@@ -30,6 +30,7 @@ Partial Class AdminMenu
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -37,7 +38,7 @@ Partial Class AdminMenu
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.Color.Transparent
         Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(37, 15)
+        Me.lblWelcome.Location = New System.Drawing.Point(15, 15)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(140, 32)
         Me.lblWelcome.TabIndex = 0
@@ -48,7 +49,7 @@ Partial Class AdminMenu
         Me.lblAdmin.AutoSize = True
         Me.lblAdmin.BackColor = System.Drawing.Color.Transparent
         Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdmin.Location = New System.Drawing.Point(168, 15)
+        Me.lblAdmin.Location = New System.Drawing.Point(146, 15)
         Me.lblAdmin.Name = "lblAdmin"
         Me.lblAdmin.Size = New System.Drawing.Size(95, 32)
         Me.lblAdmin.TabIndex = 1
@@ -108,12 +109,24 @@ Partial Class AdminMenu
         Me.Panel1.Size = New System.Drawing.Size(802, 16)
         Me.Panel1.TabIndex = 12
         '
+        'btnLogOut
+        '
+        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnLogOut.ForeColor = System.Drawing.Color.White
+        Me.btnLogOut.Location = New System.Drawing.Point(655, 391)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(128, 41)
+        Me.btnLogOut.TabIndex = 16
+        Me.btnLogOut.Text = "Log Out"
+        Me.btnLogOut.UseVisualStyleBackColor = False
+        '
         'AdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -139,4 +152,5 @@ Partial Class AdminMenu
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnLogOut As Button
 End Class
