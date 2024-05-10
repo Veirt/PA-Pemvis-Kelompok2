@@ -59,9 +59,9 @@ Public Class Login
         If count >= 1 Then
             Me.Hide()
             If role = "user" Then
-                'UserMenu.Show()
+                UserMenu.Show()
             Else
-                'AdminMenu.Show()
+                AdminMenu.Show()
             End If
         Else
             ErrorMsg("Wrong username/password!")

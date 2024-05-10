@@ -47,6 +47,7 @@ Partial Class Login
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(250, 268)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(279, 30)
         Me.txtPassword.TabIndex = 4
         '
@@ -134,7 +135,6 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -145,7 +145,8 @@ Partial Class Login
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
-        Me.MinimizeBox = False
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Login"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
