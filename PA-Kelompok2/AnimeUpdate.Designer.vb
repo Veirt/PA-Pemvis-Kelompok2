@@ -22,8 +22,6 @@ Partial Class AnimeUpdate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lblID = New System.Windows.Forms.Label()
-        Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblNamaAnime = New System.Windows.Forms.Label()
         Me.txtNamaAnime = New System.Windows.Forms.TextBox()
         Me.lblSinopsis = New System.Windows.Forms.Label()
@@ -31,7 +29,6 @@ Partial Class AnimeUpdate
         Me.lblJumlahEpisode = New System.Windows.Forms.Label()
         Me.txtJumlahEpisode = New System.Windows.Forms.TextBox()
         Me.lblGenre = New System.Windows.Forms.Label()
-        Me.txtGenre = New System.Windows.Forms.TextBox()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.cmbStatus = New System.Windows.Forms.ComboBox()
         Me.lblSeason = New System.Windows.Forms.Label()
@@ -43,211 +40,235 @@ Partial Class AnimeUpdate
         Me.lblPoster = New System.Windows.Forms.Label()
         Me.btnBrowsePoster = New System.Windows.Forms.Button()
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblID
-        '
-        Me.lblID.AutoSize = True
-        Me.lblID.Location = New System.Drawing.Point(21, 14)
-        Me.lblID.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(23, 16)
-        Me.lblID.TabIndex = 0
-        Me.lblID.Text = "ID:"
-        '
-        'txtID
-        '
-        Me.txtID.Enabled = False
-        Me.txtID.Location = New System.Drawing.Point(120, 8)
-        Me.txtID.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(175, 22)
-        Me.txtID.TabIndex = 1
         '
         'lblNamaAnime
         '
         Me.lblNamaAnime.AutoSize = True
-        Me.lblNamaAnime.Location = New System.Drawing.Point(16, 39)
+        Me.lblNamaAnime.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaAnime.Location = New System.Drawing.Point(20, 59)
         Me.lblNamaAnime.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNamaAnime.Name = "lblNamaAnime"
-        Me.lblNamaAnime.Size = New System.Drawing.Size(88, 16)
-        Me.lblNamaAnime.TabIndex = 2
+        Me.lblNamaAnime.Size = New System.Drawing.Size(117, 22)
+        Me.lblNamaAnime.TabIndex = 0
         Me.lblNamaAnime.Text = "Nama Anime:"
         '
         'txtNamaAnime
         '
-        Me.txtNamaAnime.Location = New System.Drawing.Point(120, 36)
+        Me.txtNamaAnime.Location = New System.Drawing.Point(182, 61)
         Me.txtNamaAnime.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNamaAnime.Name = "txtNamaAnime"
-        Me.txtNamaAnime.Size = New System.Drawing.Size(265, 22)
-        Me.txtNamaAnime.TabIndex = 3
+        Me.txtNamaAnime.Size = New System.Drawing.Size(342, 22)
+        Me.txtNamaAnime.TabIndex = 1
         '
         'lblSinopsis
         '
         Me.lblSinopsis.AutoSize = True
-        Me.lblSinopsis.Location = New System.Drawing.Point(21, 84)
-        Me.lblSinopsis.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblSinopsis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSinopsis.Location = New System.Drawing.Point(20, 106)
+        Me.lblSinopsis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSinopsis.Name = "lblSinopsis"
-        Me.lblSinopsis.Size = New System.Drawing.Size(62, 16)
+        Me.lblSinopsis.Size = New System.Drawing.Size(83, 22)
         Me.lblSinopsis.TabIndex = 2
         Me.lblSinopsis.Text = "Sinopsis:"
         '
         'txtSinopsis
         '
-        Me.txtSinopsis.Location = New System.Drawing.Point(131, 84)
-        Me.txtSinopsis.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtSinopsis.Location = New System.Drawing.Point(182, 108)
+        Me.txtSinopsis.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSinopsis.Multiline = True
         Me.txtSinopsis.Name = "txtSinopsis"
-        Me.txtSinopsis.Size = New System.Drawing.Size(352, 89)
+        Me.txtSinopsis.Size = New System.Drawing.Size(342, 98)
         Me.txtSinopsis.TabIndex = 3
         '
         'lblJumlahEpisode
         '
         Me.lblJumlahEpisode.AutoSize = True
-        Me.lblJumlahEpisode.Location = New System.Drawing.Point(11, 183)
-        Me.lblJumlahEpisode.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblJumlahEpisode.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJumlahEpisode.Location = New System.Drawing.Point(20, 234)
+        Me.lblJumlahEpisode.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblJumlahEpisode.Name = "lblJumlahEpisode"
-        Me.lblJumlahEpisode.Size = New System.Drawing.Size(107, 16)
+        Me.lblJumlahEpisode.Size = New System.Drawing.Size(142, 22)
         Me.lblJumlahEpisode.TabIndex = 4
         Me.lblJumlahEpisode.Text = "Jumlah Episode:"
         '
         'txtJumlahEpisode
         '
-        Me.txtJumlahEpisode.Location = New System.Drawing.Point(177, 183)
-        Me.txtJumlahEpisode.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtJumlahEpisode.Location = New System.Drawing.Point(182, 234)
+        Me.txtJumlahEpisode.Margin = New System.Windows.Forms.Padding(4)
         Me.txtJumlahEpisode.Name = "txtJumlahEpisode"
-        Me.txtJumlahEpisode.Size = New System.Drawing.Size(175, 22)
+        Me.txtJumlahEpisode.Size = New System.Drawing.Size(113, 22)
         Me.txtJumlahEpisode.TabIndex = 5
         '
         'lblGenre
         '
         Me.lblGenre.AutoSize = True
-        Me.lblGenre.Location = New System.Drawing.Point(14, 226)
-        Me.lblGenre.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGenre.Location = New System.Drawing.Point(20, 286)
+        Me.lblGenre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblGenre.Name = "lblGenre"
-        Me.lblGenre.Size = New System.Drawing.Size(47, 16)
+        Me.lblGenre.Size = New System.Drawing.Size(65, 22)
         Me.lblGenre.TabIndex = 6
         Me.lblGenre.Text = "Genre:"
-        '
-        'txtGenre
-        '
-        Me.txtGenre.Location = New System.Drawing.Point(160, 226)
-        Me.txtGenre.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtGenre.Name = "txtGenre"
-        Me.txtGenre.Size = New System.Drawing.Size(352, 22)
-        Me.txtGenre.TabIndex = 7
         '
         'lblStatus
         '
         Me.lblStatus.AutoSize = True
-        Me.lblStatus.Location = New System.Drawing.Point(11, 267)
-        Me.lblStatus.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.Location = New System.Drawing.Point(20, 435)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(47, 16)
+        Me.lblStatus.Size = New System.Drawing.Size(66, 22)
         Me.lblStatus.TabIndex = 8
         Me.lblStatus.Text = "Status:"
         '
         'cmbStatus
         '
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Location = New System.Drawing.Point(160, 267)
-        Me.cmbStatus.Margin = New System.Windows.Forms.Padding(5)
+        Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
+        Me.cmbStatus.Location = New System.Drawing.Point(182, 433)
+        Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStatus.Name = "cmbStatus"
-        Me.cmbStatus.Size = New System.Drawing.Size(212, 24)
+        Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
         Me.cmbStatus.TabIndex = 9
         '
         'lblSeason
         '
         Me.lblSeason.AutoSize = True
-        Me.lblSeason.Location = New System.Drawing.Point(11, 317)
-        Me.lblSeason.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeason.Location = New System.Drawing.Point(20, 488)
+        Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeason.Name = "lblSeason"
-        Me.lblSeason.Size = New System.Drawing.Size(57, 16)
+        Me.lblSeason.Size = New System.Drawing.Size(76, 22)
         Me.lblSeason.TabIndex = 10
         Me.lblSeason.Text = "Season:"
         '
         'cmbSeason
         '
         Me.cmbSeason.FormattingEnabled = True
-        Me.cmbSeason.Location = New System.Drawing.Point(150, 309)
-        Me.cmbSeason.Margin = New System.Windows.Forms.Padding(5)
+        Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
+        Me.cmbSeason.Location = New System.Drawing.Point(182, 486)
+        Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbSeason.Name = "cmbSeason"
-        Me.cmbSeason.Size = New System.Drawing.Size(212, 24)
+        Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
         Me.cmbSeason.TabIndex = 11
         '
         'lblYear
         '
         Me.lblYear.AutoSize = True
-        Me.lblYear.Location = New System.Drawing.Point(386, 312)
-        Me.lblYear.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblYear.Location = New System.Drawing.Point(375, 435)
+        Me.lblYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblYear.Name = "lblYear"
-        Me.lblYear.Size = New System.Drawing.Size(39, 16)
+        Me.lblYear.Size = New System.Drawing.Size(53, 22)
         Me.lblYear.TabIndex = 12
         Me.lblYear.Text = "Year:"
         '
         'txtYear
         '
-        Me.txtYear.Location = New System.Drawing.Point(447, 317)
-        Me.txtYear.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtYear.Location = New System.Drawing.Point(436, 437)
+        Me.txtYear.Margin = New System.Windows.Forms.Padding(4)
         Me.txtYear.Name = "txtYear"
-        Me.txtYear.Size = New System.Drawing.Size(175, 22)
+        Me.txtYear.Size = New System.Drawing.Size(88, 22)
         Me.txtYear.TabIndex = 13
         '
         'lblStudio
         '
         Me.lblStudio.AutoSize = True
-        Me.lblStudio.Location = New System.Drawing.Point(14, 378)
-        Me.lblStudio.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblStudio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudio.Location = New System.Drawing.Point(20, 541)
+        Me.lblStudio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStudio.Name = "lblStudio"
-        Me.lblStudio.Size = New System.Drawing.Size(48, 16)
+        Me.lblStudio.Size = New System.Drawing.Size(66, 22)
         Me.lblStudio.TabIndex = 14
         Me.lblStudio.Text = "Studio:"
         '
         'txtStudio
         '
-        Me.txtStudio.Location = New System.Drawing.Point(151, 372)
-        Me.txtStudio.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtStudio.Location = New System.Drawing.Point(182, 541)
+        Me.txtStudio.Margin = New System.Windows.Forms.Padding(4)
         Me.txtStudio.Name = "txtStudio"
-        Me.txtStudio.Size = New System.Drawing.Size(352, 22)
+        Me.txtStudio.Size = New System.Drawing.Size(265, 22)
         Me.txtStudio.TabIndex = 15
         '
         'lblPoster
         '
         Me.lblPoster.AutoSize = True
-        Me.lblPoster.Location = New System.Drawing.Point(16, 430)
-        Me.lblPoster.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblPoster.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPoster.Location = New System.Drawing.Point(623, 11)
+        Me.lblPoster.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPoster.Name = "lblPoster"
-        Me.lblPoster.Size = New System.Drawing.Size(49, 16)
+        Me.lblPoster.Size = New System.Drawing.Size(67, 22)
         Me.lblPoster.TabIndex = 16
         Me.lblPoster.Text = "Poster:"
         '
         'btnBrowsePoster
         '
-        Me.btnBrowsePoster.Location = New System.Drawing.Point(151, 527)
-        Me.btnBrowsePoster.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnBrowsePoster.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnBrowsePoster.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrowsePoster.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnBrowsePoster.Location = New System.Drawing.Point(673, 382)
+        Me.btnBrowsePoster.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBrowsePoster.Name = "btnBrowsePoster"
-        Me.btnBrowsePoster.Size = New System.Drawing.Size(133, 34)
+        Me.btnBrowsePoster.Size = New System.Drawing.Size(112, 46)
         Me.btnBrowsePoster.TabIndex = 17
-        Me.btnBrowsePoster.Text = "Browse..."
-        Me.btnBrowsePoster.UseVisualStyleBackColor = True
+        Me.btnBrowsePoster.Text = "Browse"
+        Me.btnBrowsePoster.UseVisualStyleBackColor = False
         '
         'picboxPoster
         '
+        Me.picboxPoster.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.picboxPoster.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picboxPoster.Location = New System.Drawing.Point(346, 440)
-        Me.picboxPoster.Margin = New System.Windows.Forms.Padding(5)
+        Me.picboxPoster.Location = New System.Drawing.Point(627, 60)
+        Me.picboxPoster.Margin = New System.Windows.Forms.Padding(4)
         Me.picboxPoster.Name = "picboxPoster"
-        Me.picboxPoster.Size = New System.Drawing.Size(265, 226)
+        Me.picboxPoster.Size = New System.Drawing.Size(206, 300)
         Me.picboxPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picboxPoster.TabIndex = 18
         Me.picboxPoster.TabStop = False
+        '
+        'txtID
+        '
+        Me.txtID.Location = New System.Drawing.Point(182, 13)
+        Me.txtID.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(342, 22)
+        Me.txtID.TabIndex = 20
+        '
+        'lblID
+        '
+        Me.lblID.AutoSize = True
+        Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblID.Location = New System.Drawing.Point(20, 11)
+        Me.lblID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(27, 22)
+        Me.lblID.TabIndex = 19
+        Me.lblID.Text = "ID"
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Items.AddRange(New Object() {"Action", "Comedy", "Romance", "Fantasy", "Horror", "Sports"})
+        Me.CheckedListBox1.Location = New System.Drawing.Point(182, 286)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(160, 118)
+        Me.CheckedListBox1.TabIndex = 21
         '
         'AnimeUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1440, 905)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(928, 639)
+        Me.Controls.Add(Me.CheckedListBox1)
+        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.picboxPoster)
         Me.Controls.Add(Me.btnBrowsePoster)
         Me.Controls.Add(Me.lblPoster)
@@ -259,7 +280,6 @@ Partial Class AnimeUpdate
         Me.Controls.Add(Me.lblSeason)
         Me.Controls.Add(Me.cmbStatus)
         Me.Controls.Add(Me.lblStatus)
-        Me.Controls.Add(Me.txtGenre)
         Me.Controls.Add(Me.lblGenre)
         Me.Controls.Add(Me.txtJumlahEpisode)
         Me.Controls.Add(Me.lblJumlahEpisode)
@@ -267,9 +287,7 @@ Partial Class AnimeUpdate
         Me.Controls.Add(Me.lblSinopsis)
         Me.Controls.Add(Me.txtNamaAnime)
         Me.Controls.Add(Me.lblNamaAnime)
-        Me.Controls.Add(Me.txtID)
-        Me.Controls.Add(Me.lblID)
-        Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AnimeUpdate"
         Me.Text = "Form Update"
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
@@ -277,8 +295,7 @@ Partial Class AnimeUpdate
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblID As Label
-    Friend WithEvents txtID As TextBox
+
     Friend WithEvents lblNamaAnime As Label
     Friend WithEvents txtNamaAnime As TextBox
     Friend WithEvents lblSinopsis As Label
@@ -286,7 +303,6 @@ Partial Class AnimeUpdate
     Friend WithEvents lblJumlahEpisode As Label
     Friend WithEvents txtJumlahEpisode As TextBox
     Friend WithEvents lblGenre As Label
-    Friend WithEvents txtGenre As TextBox
     Friend WithEvents lblStatus As Label
     Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents lblSeason As Label
@@ -298,4 +314,7 @@ Partial Class AnimeUpdate
     Friend WithEvents lblPoster As Label
     Friend WithEvents btnBrowsePoster As Button
     Friend WithEvents picboxPoster As PictureBox
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents lblID As Label
+    Friend WithEvents CheckedListBox1 As CheckedListBox
 End Class
