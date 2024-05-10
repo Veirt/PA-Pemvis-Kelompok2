@@ -1,7 +1,6 @@
 ﻿
 
 Public Class Anime
-
     Private Function ValidateInput(ByRef title As String, ByRef synopsis As String, ByRef season As String,
                                    ByRef year As String, ByRef studio As String, ByRef status As String)
         title = txtNamaAnime.Text
@@ -13,35 +12,38 @@ Public Class Anime
 
         ' Validation
         If title = Nothing Then
-            MsgBox("Title tidak boleh kosong!", MsgBoxStyle.Critical)
+            ErrorMsg("Title tidak boleh kosong!")
             Return False
         End If
 
         If synopsis = Nothing Then
-            MsgBox("Sinopsis tidak boleh kosong!", MsgBoxStyle.Critical)
+            ErrorMsg("Sinopsis tidak boleh kosong!")
             Return False
         End If
 
         If season = Nothing Then
-            MsgBox("Season tidak dipilih!", MsgBoxStyle.Critical)
+            ErrorMsg("Season tidak dipilih!")
             Return False
         End If
 
-
+        If studio = Nothing Then
+            ErrorMsg("Studio tidak boleh kosong!")
+            Return False
+        End If
 
         If year = Nothing Then
-            MsgBox("Tahun tidak boleh kosong!", MsgBoxStyle.Critical)
+            ErrorMsg("Tahun tidak boleh kosong!")
             Return False
         End If
 
         Dim yearInt As Integer = Integer.Parse(year)
         If yearInt < 1917 Then
-            MsgBox("Anime terlalu tua!", MsgBoxStyle.Critical)
+            ErrorMsg("Anime terlalu tua!")
             Return False
         End If
 
         If status = Nothing Then
-            MsgBox("Status tayang tidak boleh kosong!", MsgBoxStyle.Critical)
+            ErrorMsg("Status tayang tidak boleh kosong!")
             Return False
         End If
 
