@@ -117,6 +117,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Session.vb" />
     <Compile Include="UserMenu.Designer.vb">
       <DependentUpon>UserMenu.vb</DependentUpon>
     </Compile>

@@ -50,15 +50,18 @@ Public Class Login
         Dim username = txtUsername.Text
         Dim password = txtPassword.Text
 
-        CMD = New MySqlCommand($"SELECT COUNT(*) AS count, role FROM users WHERE username = '{username}' AND password = SHA('{password}')", CONN)
+        CMD = New MySqlCommand($"SELECT *, COUNT(*) AS count FROM users WHERE username = '{username}' AND password = SHA('{password}')", CONN)
         RD = CMD.ExecuteReader
         RD.Read()
-        Dim count = RD("Count")
-        Dim role = RD("role")
 
+        Dim count = RD("Count")
         If count >= 1 Then
+            Session.UserId = RD("id")
+            Session.Username = RD("username")
+            Session.Role = RD("role")
+
             Me.Hide()
-            If role = "user" Then
+            If Session.Role = "user" Then
                 UserMenu.Show()
             Else
                 AdminMenu.Show()
