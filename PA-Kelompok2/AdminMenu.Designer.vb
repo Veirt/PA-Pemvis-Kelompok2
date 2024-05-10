@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AdminMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,16 @@ Partial Class AdminMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.lblAdmin = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnRead = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -33,7 +37,7 @@ Partial Class AdminMenu
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.Color.Transparent
         Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(12, 9)
+        Me.lblWelcome.Location = New System.Drawing.Point(37, 15)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(140, 32)
         Me.lblWelcome.TabIndex = 0
@@ -44,7 +48,7 @@ Partial Class AdminMenu
         Me.lblAdmin.AutoSize = True
         Me.lblAdmin.BackColor = System.Drawing.Color.Transparent
         Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdmin.Location = New System.Drawing.Point(143, 9)
+        Me.lblAdmin.Location = New System.Drawing.Point(168, 15)
         Me.lblAdmin.Name = "lblAdmin"
         Me.lblAdmin.Size = New System.Drawing.Size(95, 32)
         Me.lblAdmin.TabIndex = 1
@@ -72,16 +76,54 @@ Partial Class AdminMenu
         Me.btnRead.Text = "View Anime"
         Me.btnRead.UseVisualStyleBackColor = False
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(789, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(12, 452)
+        Me.Panel4.TabIndex = 15
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(-1, -1)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(12, 452)
+        Me.Panel3.TabIndex = 14
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel2.Location = New System.Drawing.Point(0, 438)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(802, 16)
+        Me.Panel2.TabIndex = 13
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(0, -4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(802, 16)
+        Me.Panel1.TabIndex = 12
+        '
         'AdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnRead)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.lblAdmin)
         Me.Controls.Add(Me.lblWelcome)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AdminMenu"
         Me.Text = "AdminMenu"
         Me.ResumeLayout(False)
@@ -93,4 +135,8 @@ Partial Class AdminMenu
     Friend WithEvents lblAdmin As Label
     Friend WithEvents btnCreate As Button
     Friend WithEvents btnRead As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -28,6 +28,10 @@ Partial Class Login
         Me.btnRegistrasi = New System.Windows.Forms.Button()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'txtUsername
@@ -92,18 +96,56 @@ Partial Class Login
         Me.lblPassword.TabIndex = 2
         Me.lblPassword.Text = "Password"
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(789, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(12, 452)
+        Me.Panel4.TabIndex = 15
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(-1, -1)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(12, 452)
+        Me.Panel3.TabIndex = 14
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel2.Location = New System.Drawing.Point(0, 438)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(802, 16)
+        Me.Panel2.TabIndex = 13
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(0, -4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(802, 16)
+        Me.Panel1.TabIndex = 12
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnRegistrasi)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
+        Me.MinimizeBox = False
         Me.Name = "Login"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -116,4 +158,8 @@ Partial Class Login
     Friend WithEvents btnRegistrasi As Button
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblPassword As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
 End Class
