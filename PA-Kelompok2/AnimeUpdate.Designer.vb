@@ -42,7 +42,7 @@ Partial Class AnimeUpdate
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblID = New System.Windows.Forms.Label()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.clbGenres = New System.Windows.Forms.CheckedListBox()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -250,15 +250,15 @@ Partial Class AnimeUpdate
         Me.lblID.TabIndex = 19
         Me.lblID.Text = "ID"
         '
-        'CheckedListBox1
+        'clbGenres
         '
-        Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"Action", "Comedy", "Romance", "Fantasy", "Horror", "Sports"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(182, 286)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(160, 118)
-        Me.CheckedListBox1.TabIndex = 21
+        Me.clbGenres.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clbGenres.FormattingEnabled = True
+        Me.clbGenres.Items.AddRange(New Object() {"Action", "Comedy", "Romance", "Fantasy", "Horror", "Sports"})
+        Me.clbGenres.Location = New System.Drawing.Point(182, 286)
+        Me.clbGenres.Name = "clbGenres"
+        Me.clbGenres.Size = New System.Drawing.Size(160, 118)
+        Me.clbGenres.TabIndex = 21
         '
         'AnimeUpdate
         '
@@ -266,7 +266,7 @@ Partial Class AnimeUpdate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(928, 639)
-        Me.Controls.Add(Me.CheckedListBox1)
+        Me.Controls.Add(Me.clbGenres)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.picboxPoster)
@@ -316,5 +316,5 @@ Partial Class AnimeUpdate
     Friend WithEvents picboxPoster As PictureBox
     Friend WithEvents txtID As TextBox
     Friend WithEvents lblID As Label
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents clbGenres As CheckedListBox
 End Class

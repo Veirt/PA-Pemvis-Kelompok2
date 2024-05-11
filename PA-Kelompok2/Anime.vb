@@ -114,9 +114,6 @@ Public Class Anime
         Return String.Join(", ", checkedItems)
     End Function
 
-
-
-
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Dim title = txtNamaAnime.Text
         Dim synopsis = txtSinopsis.Text
@@ -145,7 +142,6 @@ Public Class Anime
         Dim query As String = "INSERT INTO anime (title, synopsis, episodes, genre, season, year, status, studio, poster) " &
                       "VALUES (@title, @synopsis, @episodes, @genre, @season, @year, @status, @studio, @poster)"
 
-        ' Create a new SQL command and add the parameters
         Using cmd As New MySqlCommand(query, CONN)
             cmd.Parameters.AddWithValue("@title", title)
             cmd.Parameters.AddWithValue("@synopsis", synopsis)
@@ -157,7 +153,6 @@ Public Class Anime
             cmd.Parameters.AddWithValue("@studio", studio)
             cmd.Parameters.AddWithValue("@poster", poster)
 
-            ' Execute the SQL command
             cmd.ExecuteNonQuery()
         End Using
 
