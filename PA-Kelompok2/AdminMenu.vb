@@ -7,4 +7,8 @@
         Me.Close()
         Login.Show()
     End Sub
+
+    Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+        Anime.Show()
+    End Sub
 End Class

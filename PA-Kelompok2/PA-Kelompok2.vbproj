@@ -162,10 +162,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lebron.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Paladea.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -40,7 +40,10 @@ Partial Class Anime
         Me.lblPoster = New System.Windows.Forms.Label()
         Me.btnBrowsePoster = New System.Windows.Forms.Button()
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.clbGenres = New System.Windows.Forms.CheckedListBox()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,7 +120,7 @@ Partial Class Anime
         '
         Me.lblStatus.AutoSize = True
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(16, 388)
+        Me.lblStatus.Location = New System.Drawing.Point(15, 443)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(66, 22)
@@ -126,9 +129,10 @@ Partial Class Anime
         '
         'cmbStatus
         '
+        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.FormattingEnabled = True
         Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
-        Me.cmbStatus.Location = New System.Drawing.Point(178, 386)
+        Me.cmbStatus.Location = New System.Drawing.Point(177, 441)
         Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
@@ -138,7 +142,7 @@ Partial Class Anime
         '
         Me.lblSeason.AutoSize = True
         Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeason.Location = New System.Drawing.Point(16, 441)
+        Me.lblSeason.Location = New System.Drawing.Point(16, 384)
         Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeason.Name = "lblSeason"
         Me.lblSeason.Size = New System.Drawing.Size(76, 22)
@@ -147,9 +151,10 @@ Partial Class Anime
         '
         'cmbSeason
         '
+        Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSeason.FormattingEnabled = True
         Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
-        Me.cmbSeason.Location = New System.Drawing.Point(178, 439)
+        Me.cmbSeason.Location = New System.Drawing.Point(178, 382)
         Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbSeason.Name = "cmbSeason"
         Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
@@ -159,7 +164,7 @@ Partial Class Anime
         '
         Me.lblYear.AutoSize = True
         Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblYear.Location = New System.Drawing.Point(371, 388)
+        Me.lblYear.Location = New System.Drawing.Point(368, 382)
         Me.lblYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblYear.Name = "lblYear"
         Me.lblYear.Size = New System.Drawing.Size(53, 22)
@@ -168,7 +173,7 @@ Partial Class Anime
         '
         'txtYear
         '
-        Me.txtYear.Location = New System.Drawing.Point(432, 390)
+        Me.txtYear.Location = New System.Drawing.Point(429, 384)
         Me.txtYear.Margin = New System.Windows.Forms.Padding(4)
         Me.txtYear.Name = "txtYear"
         Me.txtYear.Size = New System.Drawing.Size(88, 22)
@@ -221,6 +226,7 @@ Partial Class Anime
         '
         Me.picboxPoster.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.picboxPoster.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picboxPoster.ImageLocation = ""
         Me.picboxPoster.Location = New System.Drawing.Point(627, 60)
         Me.picboxPoster.Margin = New System.Windows.Forms.Padding(4)
         Me.picboxPoster.Name = "picboxPoster"
@@ -229,15 +235,35 @@ Partial Class Anime
         Me.picboxPoster.TabIndex = 18
         Me.picboxPoster.TabStop = False
         '
-        'CheckedListBox1
+        'clbGenres
         '
-        Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"Action", "Comedy", "Romance", "Fantasy", "Horror", "Sports"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(178, 238)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(160, 118)
-        Me.CheckedListBox1.TabIndex = 19
+        Me.clbGenres.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clbGenres.FormattingEnabled = True
+        Me.clbGenres.Items.AddRange(New Object() {"Action", "Comedy", "Romance", "Fantasy", "Horror", "Sports"})
+        Me.clbGenres.Location = New System.Drawing.Point(178, 238)
+        Me.clbGenres.Name = "clbGenres"
+        Me.clbGenres.Size = New System.Drawing.Size(160, 118)
+        Me.clbGenres.TabIndex = 19
+        '
+        'btnCreate
+        '
+        Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnCreate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCreate.Location = New System.Drawing.Point(771, 506)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(112, 42)
+        Me.btnCreate.TabIndex = 20
+        Me.btnCreate.Text = "Create"
+        Me.btnCreate.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.FileName = "g"
         '
         'Anime
         '
@@ -245,7 +271,8 @@ Partial Class Anime
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(928, 569)
-        Me.Controls.Add(Me.CheckedListBox1)
+        Me.Controls.Add(Me.btnCreate)
+        Me.Controls.Add(Me.clbGenres)
         Me.Controls.Add(Me.picboxPoster)
         Me.Controls.Add(Me.btnBrowsePoster)
         Me.Controls.Add(Me.lblPoster)
@@ -291,5 +318,8 @@ Partial Class Anime
     Friend WithEvents lblPoster As Label
     Friend WithEvents btnBrowsePoster As Button
     Friend WithEvents picboxPoster As PictureBox
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents clbGenres As CheckedListBox
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class
