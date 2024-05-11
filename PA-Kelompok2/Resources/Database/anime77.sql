@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2024 at 05:38 PM
+-- Generation Time: May 11, 2024 at 05:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `anime` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
   `synopsis` text NOT NULL,
   `episodes` int(11) NOT NULL,
   `genre` text NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `anime` (
   `season` enum('Winter','Spring','Summer','Fall') NOT NULL,
   `year` year(4) NOT NULL,
   `studio` varchar(255) NOT NULL,
-  `poster` varchar(255) NOT NULL
+  `poster` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -65,6 +65,14 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `role` enum('user','admin') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
+(1, 'user', '12dea96fec20593566ab75692c9949596833adc9', 'user'),
+(2, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -97,13 +105,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `anime`
 --
 ALTER TABLE `anime`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
