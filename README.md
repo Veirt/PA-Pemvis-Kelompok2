@@ -4,13 +4,13 @@
 - [x] Register
 - [ ] Admin
 
-  - [ ] Create
+  - [x] Create
   - [ ] Read all/update/delete
   - [ ] Read individually
   - [x] Log out
 
 - [ ] User
-  - [ ] Read all
+  - [x] Read all
   - [ ] Read individually
     - [ ] Create/Update/Delete Review
   - [x] Log out
