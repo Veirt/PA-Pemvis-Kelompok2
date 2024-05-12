@@ -48,38 +48,65 @@ Public Class AnimeUpdate
     Private Sub txtYear_TextChanged(sender As Object, e As EventArgs) Handles txtYear.TextChanged
         cmbStatus.Items.Clear()
 
-        If txtYear.Text = Nothing Then
+        If txtYear.Text = Nothing OrElse cmbSeason.Text = Nothing Then
             Return
         End If
+
+        Dim season_month As Dictionary(Of String, Integer()) = New Dictionary(Of String, Integer()) From {
+        {"Winter", {1, 2, 3}},
+        {"Spring", {4, 5, 6}},
+        {"Summer", {7, 8, 9}},
+        {"Fall", {10, 11, 12}}
+        }
 
         Dim yearInt As Integer = Integer.Parse(txtYear.Text)
         Dim season As String = cmbSeason.Text
         Dim currentYear As Integer = DateTime.Now.Year
         Dim currentMonth As Integer = DateTime.Now.Month
 
-        If yearInt < currentYear Or (yearInt = currentYear And SeasonIsPast(season, currentMonth)) Then
+        Dim first_month_of_season As Integer = season_month(season)(0)
+        Dim last_month_of_season As Integer = season_month(season)(2)
+
+        If yearInt < currentYear Then
             cmbStatus.Items.Add("Finished")
-        ElseIf yearInt = currentYear And Not SeasonIsPast(season, currentMonth) Then
             cmbStatus.Items.Add("Airing")
+        ElseIf yearInt = currentYear Then
+            If currentMonth < first_month_of_season Then
+                cmbStatus.Items.Add("Airing")
+                cmbStatus.Items.Add("Finished")
+            ElseIf currentMonth >= first_month_of_season And currentMonth <= last_month_of_season Then
+                cmbStatus.Items.Add("Airing")
+                cmbStatus.Items.Add("Finished")
+                cmbStatus.Items.Add("Upcoming")
+            ElseIf currentMonth > last_month_of_season Then
+                cmbStatus.Items.Add("Upcoming")
+            End If
         ElseIf yearInt > currentYear Then
             cmbStatus.Items.Add("Upcoming")
         End If
     End Sub
 
-    Private Function SeasonIsPast(season As String, currentMonth As Integer) As Boolean
-        Select Case season
-            Case "spring"
-                Return currentMonth >= 4 'april-may-june
-            Case "summer"
-                Return currentMonth >= 7 'july-august-september
-            Case "fall"
-                Return currentMonth >= 10 'october-november-december
-            Case "winter"
-                Return currentMonth >= 1 AndAlso currentMonth < 4 'january-february-march
-            Case Else
-                Return False
-        End Select
+    Function GetCurrentSeason() As String
+        Dim season_month As Dictionary(Of String, Integer()) = New Dictionary(Of String, Integer()) From {
+        {"Winter", {1, 2, 3}},
+        {"Spring", {4, 5, 6}},
+        {"Summer", {7, 8, 9}},
+        {"Fall", {10, 11, 12}}
+        }
+        Dim month As Integer = DateTime.Now.Month
+
+        For Each pair In season_month
+            Dim season As String = pair.Key
+            Dim months As Integer() = pair.Value
+
+            If Array.IndexOf(months, month) <> -1 Then
+                Return season
+            End If
+        Next
+
+        Return ""
     End Function
+
 
     Function GetGenres(clb As CheckedListBox)
         Dim checkedItems As New List(Of String)
