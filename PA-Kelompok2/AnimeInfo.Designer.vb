@@ -30,7 +30,7 @@ Partial Class AnimeInfo
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.flpReview = New System.Windows.Forms.Panel()
         Me.lblReview = New System.Windows.Forms.Label()
         Me.lblScoreUser = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
@@ -62,7 +62,7 @@ Partial Class AnimeInfo
         Me.lblId = New System.Windows.Forms.Label()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.flpReview.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
@@ -154,16 +154,16 @@ Partial Class AnimeInfo
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
-        'Panel3
+        'flpReview
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.lblReview)
-        Me.Panel3.Controls.Add(Me.lblScoreUser)
-        Me.Panel3.Controls.Add(Me.lblUsername)
-        Me.Panel3.Location = New System.Drawing.Point(384, 378)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(548, 227)
-        Me.Panel3.TabIndex = 7
+        Me.flpReview.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.flpReview.Controls.Add(Me.lblReview)
+        Me.flpReview.Controls.Add(Me.lblScoreUser)
+        Me.flpReview.Controls.Add(Me.lblUsername)
+        Me.flpReview.Location = New System.Drawing.Point(384, 378)
+        Me.flpReview.Name = "flpReview"
+        Me.flpReview.Size = New System.Drawing.Size(548, 227)
+        Me.flpReview.TabIndex = 7
         '
         'lblReview
         '
@@ -488,7 +488,7 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblStudio)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.flpReview)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
@@ -511,8 +511,8 @@ Partial Class AnimeInfo
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.flpReview.ResumeLayout(False)
+        Me.flpReview.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -530,7 +530,7 @@ Partial Class AnimeInfo
     Friend WithEvents Label8 As Label
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnUpdate As Button
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents flpReview As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label

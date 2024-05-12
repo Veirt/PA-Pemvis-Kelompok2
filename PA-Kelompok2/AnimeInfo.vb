@@ -38,6 +38,8 @@ Public Class AnimeInfo
 
     End Sub
 
+
+
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         AnimeUpdate.FillData(lblId.Text)
         AnimeUpdate.Show()
@@ -55,10 +57,21 @@ Public Class AnimeInfo
     End Sub
 
     Private Sub btnUpdateRev_Click(sender As Object, e As EventArgs) Handles btnUpdateRev.Click
-
+        Review.Show()
     End Sub
 
     Private Sub btnDeleteRev_Click(sender As Object, e As EventArgs) Handles btnDeleteRev.Click
+        Dim query As String = "DELETE FROM reviews WHERE id_anime = @id_anime"
+        Using cmd As New MySqlCommand(query, CONN)
+            cmd.Parameters.AddWithValue("@id_anime", lblId.Text)
+            cmd.ExecuteNonQuery()
+        End Using
+        SuccessMsg("Review berhasil dihapus!")
+        ReloadData()
+        Me.Close()
+    End Sub
 
+    Private Sub btnAddRev_Click(sender As Object, e As EventArgs) Handles btnAddRev.Click
+        Review.Show()
     End Sub
 End Class

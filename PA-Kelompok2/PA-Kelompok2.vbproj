@@ -129,6 +129,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Review.Designer.vb">
+      <DependentUpon>Review.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Review.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Session.vb" />
     <Compile Include="UserMenu.Designer.vb">
       <DependentUpon>UserMenu.vb</DependentUpon>
@@ -163,6 +169,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMenu.resx">
       <DependentUpon>UserMenu.vb</DependentUpon>
