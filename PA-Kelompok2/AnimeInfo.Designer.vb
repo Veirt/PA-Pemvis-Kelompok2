@@ -22,7 +22,7 @@ Partial Class AnimeInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pbPoster = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblSynopsis = New System.Windows.Forms.Label()
@@ -58,21 +58,22 @@ Partial Class AnimeInfo
         Me.btnUpdateRev = New System.Windows.Forms.Button()
         Me.lblGenre = New System.Windows.Forms.Label()
         Me.btnAddRev = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'pbPoster
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(46, 86)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 300)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pbPoster.BackColor = System.Drawing.Color.Transparent
+        Me.pbPoster.Location = New System.Drawing.Point(46, 86)
+        Me.pbPoster.Name = "pbPoster"
+        Me.pbPoster.Size = New System.Drawing.Size(206, 300)
+        Me.pbPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbPoster.TabIndex = 0
+        Me.pbPoster.TabStop = False
         '
         'lblTitle
         '
@@ -433,7 +434,7 @@ Partial Class AnimeInfo
         Me.lblGenre.BackColor = System.Drawing.Color.Transparent
         Me.lblGenre.Location = New System.Drawing.Point(120, 566)
         Me.lblGenre.Name = "lblGenre"
-        Me.lblGenre.Size = New System.Drawing.Size(10, 16)
+        Me.lblGenre.Size = New System.Drawing.Size(132, 123)
         Me.lblGenre.TabIndex = 35
         Me.lblGenre.Text = ":"
         '
@@ -482,10 +483,10 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.lblEpisode)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pbPoster)
         Me.Name = "AnimeInfo"
         Me.Text = "AnimeInfo"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -499,7 +500,7 @@ Partial Class AnimeInfo
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbPoster As PictureBox
     Friend WithEvents lblTitle As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lblSynopsis As Label

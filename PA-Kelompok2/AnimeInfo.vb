@@ -17,7 +17,10 @@ Public Class AnimeInfo
         lblStudio.Text = RD("studio")
         'Genre Masih Error
         lblGenre.Text = RD("genre")
-        'Image Belum Ada
+        Dim imageBytes As Byte() = DirectCast(RD("poster"), Byte())
+        Using ms As New MemoryStream(imageBytes)
+            pbPoster.Image = Image.FromStream(ms)
+        End Using
         RD.Close()
 
     End Sub
