@@ -45,6 +45,7 @@ Partial Class AnimeUpdate
         Me.clbGenres = New System.Windows.Forms.CheckedListBox()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -289,6 +290,10 @@ Partial Class AnimeUpdate
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = False
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'AnimeUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -350,4 +355,5 @@ Partial Class AnimeUpdate
     Friend WithEvents clbGenres As CheckedListBox
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnUpdate As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

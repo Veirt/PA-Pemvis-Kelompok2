@@ -66,13 +66,58 @@ Public Class AnimeUpdate
         End If
     End Sub
 
+    Function GetGenres(clb As CheckedListBox)
+        Dim checkedItems As New List(Of String)
+
+        For Each item In clb.CheckedItems
+            checkedItems.Add(item.ToString())
+        Next
+
+        Return String.Join(", ", checkedItems)
+    End Function
+
     ' TODO: update
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
 
+        If Not ValidateAnime(txtNamaAnime.Text, txtSinopsis.Text, txtJumlahEpisode.Text, GetGenres(clbGenres),
+                             cmbSeason.Text, txtYear.Text, cmbStatus.Text, txtStudio.Text, picboxPoster) Then
+            Return
+        End If
+
+        Dim query As String = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio, poster = @poster WHERE id = @id"
+        Using cmd As New MySqlCommand(query, CONN)
+            cmd.Parameters.AddWithValue("@id", txtID.Text)
+            cmd.Parameters.AddWithValue("@title", txtNamaAnime.Text)
+            cmd.Parameters.AddWithValue("@synopsis", txtSinopsis.Text)
+            cmd.Parameters.AddWithValue("@episodes", txtJumlahEpisode.Text)
+            cmd.Parameters.AddWithValue("@genre", GetGenres(clbGenres))
+            cmd.Parameters.AddWithValue("@season", cmbSeason.Text)
+            cmd.Parameters.AddWithValue("@year", txtYear.Text)
+            cmd.Parameters.AddWithValue("@status", cmbStatus.Text)
+            cmd.Parameters.AddWithValue("@studio", txtStudio.Text)
+
+            ' masukkan poster dalam format byte/mediumblob di database
+            Dim poster As Byte()
+            Using ms As New MemoryStream()
+                picboxPoster.Image.Save(ms, picboxPoster.Image.RawFormat)
+                poster = ms.ToArray()
+            End Using
+
+            cmd.Parameters.AddWithValue("@poster", poster)
+
+            cmd.ExecuteNonQuery()
+        End Using
     End Sub
 
     ' TODO: delete
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
 
+    End Sub
+
+    Private Sub btnBrowsePoster_Click(sender As Object, e As EventArgs) Handles btnBrowsePoster.Click
+        OpenFileDialog1.Filter = "JPEG Files|*.jpg;*.jpeg|PNG Files|*.png"
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            picboxPoster.ImageLocation = OpenFileDialog1.FileName
+        End If
     End Sub
 End Class
