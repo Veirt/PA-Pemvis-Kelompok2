@@ -57,6 +57,7 @@ Partial Class AnimeInfo
         Me.btnDeleteRev = New System.Windows.Forms.Button()
         Me.btnUpdateRev = New System.Windows.Forms.Button()
         Me.lblGenre = New System.Windows.Forms.Label()
+        Me.btnAddRev = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -436,12 +437,25 @@ Partial Class AnimeInfo
         Me.lblGenre.TabIndex = 35
         Me.lblGenre.Text = ":"
         '
+        'btnAddRev
+        '
+        Me.btnAddRev.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.btnAddRev.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddRev.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAddRev.Location = New System.Drawing.Point(377, 640)
+        Me.btnAddRev.Name = "btnAddRev"
+        Me.btnAddRev.Size = New System.Drawing.Size(112, 32)
+        Me.btnAddRev.TabIndex = 36
+        Me.btnAddRev.Text = "Add Review"
+        Me.btnAddRev.UseVisualStyleBackColor = False
+        '
         'AnimeInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(959, 698)
+        Me.Controls.Add(Me.btnAddRev)
         Me.Controls.Add(Me.lblGenre)
         Me.Controls.Add(Me.btnDeleteRev)
         Me.Controls.Add(Me.btnUpdateRev)
@@ -520,4 +534,5 @@ Partial Class AnimeInfo
     Friend WithEvents lblScoreUser As Label
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblGenre As Label
+    Friend WithEvents btnAddRev As Button
 End Class

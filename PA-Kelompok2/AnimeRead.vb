@@ -16,7 +16,8 @@ Public Class AnimeRead
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        AnimeUpdate.Show()
+        AnimeInfo.Show()
+        Me.Hide()
 
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim row As DataGridViewRow = DataGridView1.SelectedRows(0)
