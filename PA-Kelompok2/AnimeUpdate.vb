@@ -45,7 +45,7 @@ Public Class AnimeUpdate
         OnlyNumber(sender, e)
     End Sub
 
-    Private Sub txtYear_TextChanged(sender As Object, e As EventArgs) Handles txtYear.TextChanged
+    Private Sub txtYear_TextChanged(sender As Object, e As EventArgs) Handles txtYear.TextChanged, cmbSeason.SelectedIndexChanged
         cmbStatus.Items.Clear()
 
         If txtYear.Text = Nothing OrElse cmbSeason.Text = Nothing Then
@@ -72,14 +72,14 @@ Public Class AnimeUpdate
             cmbStatus.Items.Add("Airing")
         ElseIf yearInt = currentYear Then
             If currentMonth < first_month_of_season Then
-                cmbStatus.Items.Add("Airing")
-                cmbStatus.Items.Add("Finished")
+                cmbStatus.Items.Add("Upcoming")
             ElseIf currentMonth >= first_month_of_season And currentMonth <= last_month_of_season Then
                 cmbStatus.Items.Add("Airing")
                 cmbStatus.Items.Add("Finished")
                 cmbStatus.Items.Add("Upcoming")
             ElseIf currentMonth > last_month_of_season Then
-                cmbStatus.Items.Add("Upcoming")
+                cmbStatus.Items.Add("Airing")
+                cmbStatus.Items.Add("Finished")
             End If
         ElseIf yearInt > currentYear Then
             cmbStatus.Items.Add("Upcoming")
@@ -175,5 +175,9 @@ Public Class AnimeUpdate
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             picboxPoster.ImageLocation = OpenFileDialog1.FileName
         End If
+    End Sub
+
+    Private Sub cmbSeason_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSeason.SelectedIndexChanged
+
     End Sub
 End Class
