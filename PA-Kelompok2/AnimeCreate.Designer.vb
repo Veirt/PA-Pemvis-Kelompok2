@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Anime
+Partial Class AnimeCreate
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -235,7 +235,7 @@ Partial Class Anime
         '
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
+        Me.cmbStatus.Items.AddRange(New Object() {"Airing", "Finished", "Upcoming"})
         Me.cmbStatus.Location = New System.Drawing.Point(178, 438)
         Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStatus.Name = "cmbStatus"

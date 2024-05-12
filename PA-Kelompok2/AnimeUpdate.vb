@@ -11,9 +11,9 @@ Public Class AnimeUpdate
         txtNamaAnime.Text = RD("title")
         txtSinopsis.Text = RD("synopsis")
         txtJumlahEpisode.Text = RD("episodes")
-        cmbStatus.Text = RD("status")
         txtYear.Text = RD("year")
         cmbSeason.Text = RD("season")
+        cmbStatus.Text = RD("status")
         txtStudio.Text = RD("studio")
 
         ' image
@@ -118,7 +118,6 @@ Public Class AnimeUpdate
         Return String.Join(", ", checkedItems)
     End Function
 
-    ' TODO: update
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If Not ValidateAnime(txtNamaAnime.Text, txtSinopsis.Text, txtJumlahEpisode.Text, GetGenres(clbGenres),
                              cmbSeason.Text, txtYear.Text, cmbStatus.Text, txtStudio.Text, picboxPoster) Then
@@ -128,7 +127,6 @@ Public Class AnimeUpdate
         Dim query As String
         If picboxPoster.ImageLocation <> Nothing Then
             query = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio, poster = @poster WHERE id = @id"
-
         Else
             query = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio WHERE id = @id"
         End If
@@ -155,18 +153,7 @@ Public Class AnimeUpdate
             cmd.ExecuteNonQuery()
         End Using
         SuccessMsg("Data berhasil diupdate!")
-        Me.Close()
-    End Sub
-
-    ' TODO: delete
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-
-        Dim query As String = "DELETE FROM anime WHERE id = @id"
-        Using cmd As New MySqlCommand(query, CONN)
-            cmd.Parameters.AddWithValue("@id", txtID.Text)
-            cmd.ExecuteNonQuery()
-        End Using
-        SuccessMsg("Data berhasil dihapus!")
+        AnimeInfo.FillData(txtID.Text)
         Me.Close()
     End Sub
 
@@ -175,9 +162,5 @@ Public Class AnimeUpdate
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             picboxPoster.ImageLocation = OpenFileDialog1.FileName
         End If
-    End Sub
-
-    Private Sub cmbSeason_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSeason.SelectedIndexChanged
-
     End Sub
 End Class

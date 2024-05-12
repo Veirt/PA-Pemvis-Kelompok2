@@ -3,11 +3,12 @@ Imports MySql.Data.MySqlClient
 
 Public Class AnimeInfo
 
-    Public Sub DataAnime(id As String)
+    Public Sub FillData(id As String)
         CMD = New MySqlCommand($"SELECT  * FROM anime WHERE id = {id}", CONN)
         RD = CMD.ExecuteReader
         RD.Read()
 
+        lblId.Text = RD("id")
         lblTitle.Text = RD("title")
         lblSynopsis.Text = RD("synopsis")
         lblEpisode.Text = RD("episodes")
@@ -15,11 +16,15 @@ Public Class AnimeInfo
         lblYear.Text = RD("year")
         lblSeason.Text = RD("season")
         lblStudio.Text = RD("studio")
-        'Genre Masih Error
         lblGenre.Text = RD("genre")
-        'Image Belum Ada
-        RD.Close()
 
+        ' image
+        Dim imageBytes As Byte() = DirectCast(RD("poster"), Byte())
+        Using ms As New MemoryStream(imageBytes)
+            picboxPoster.Image = Image.FromStream(ms)
+        End Using
+
+        RD.Close()
     End Sub
     Private Sub AnimeInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Session.Role = "user" Then
@@ -31,18 +36,21 @@ Public Class AnimeInfo
             btnAddRev.Hide()
         End If
 
-        DataAnime("id")
-
-    End Sub
-
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        'Update Masih Error
+        AnimeUpdate.FillData(lblId.Text)
         AnimeUpdate.Show()
-        Me.Hide()
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim query As String = "DELETE FROM anime WHERE id = @id"
+        Using cmd As New MySqlCommand(query, CONN)
+            cmd.Parameters.AddWithValue("@id", lblId.Text)
+            cmd.ExecuteNonQuery()
+        End Using
+        SuccessMsg("Data berhasil dihapus!")
+        Me.Close()
     End Sub
 
     Private Sub btnUpdateRev_Click(sender As Object, e As EventArgs) Handles btnUpdateRev.Click

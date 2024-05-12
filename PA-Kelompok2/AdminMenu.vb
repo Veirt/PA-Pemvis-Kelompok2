@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
-        Anime.Show()
+        AnimeCreate.Show()
     End Sub
 
     Private Sub btnRead_Click(sender As Object, e As EventArgs) Handles btnRead.Click

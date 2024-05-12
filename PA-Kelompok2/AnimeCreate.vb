@@ -2,7 +2,7 @@
 Imports System.IO
 Imports MySql.Data.MySqlClient
 
-Public Class Anime
+Public Class AnimeCreate
     Private Sub txtJumlahEpisode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtJumlahEpisode.KeyPress
         OnlyNumber(sender, e)
     End Sub
@@ -114,6 +114,7 @@ Public Class Anime
         End Using
 
         SuccessMsg("Anime berhasil dibuat!")
+        ReloadData()
         Me.Close()
     End Sub
 

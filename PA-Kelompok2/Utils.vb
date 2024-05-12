@@ -6,4 +6,8 @@
     Public Sub ErrorMsg(msg As String)
         MsgBox(msg, MsgBoxStyle.Critical)
     End Sub
+
+    Public Sub ReloadData()
+        AnimeRead.Read()
+    End Sub
 End Module

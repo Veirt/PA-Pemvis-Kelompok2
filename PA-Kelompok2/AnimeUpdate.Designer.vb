@@ -43,7 +43,6 @@ Partial Class AnimeUpdate
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblID = New System.Windows.Forms.Label()
         Me.clbGenres = New System.Windows.Forms.CheckedListBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
@@ -267,18 +266,6 @@ Partial Class AnimeUpdate
         Me.clbGenres.Size = New System.Drawing.Size(160, 118)
         Me.clbGenres.TabIndex = 21
         '
-        'btnDelete
-        '
-        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
-        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDelete.Location = New System.Drawing.Point(775, 571)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(112, 42)
-        Me.btnDelete.TabIndex = 24
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = False
-        '
         'btnUpdate
         '
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
@@ -305,7 +292,6 @@ Partial Class AnimeUpdate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(928, 639)
-        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.clbGenres)
         Me.Controls.Add(Me.txtID)
@@ -358,7 +344,6 @@ Partial Class AnimeUpdate
     Friend WithEvents txtID As TextBox
     Friend WithEvents lblID As Label
     Friend WithEvents clbGenres As CheckedListBox
-    Friend WithEvents btnDelete As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents OpenFileDialog2 As OpenFileDialog

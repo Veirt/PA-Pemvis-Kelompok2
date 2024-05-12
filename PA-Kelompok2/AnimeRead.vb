@@ -24,16 +24,12 @@ Public Class AnimeRead
             If row.Index < DataGridView1.RowCount And row.Index >= 0 Then
                 Dim cellValue As Object = row.Cells(0).Value
                 If cellValue IsNot DBNull.Value Then
-                    AnimeUpdate.Show()
-                    AnimeUpdate.FillData(cellValue.ToString())
+                    AnimeInfo.FillData(cellValue.ToString())
+                    AnimeInfo.Show()
                 Else
                     ErrorMsg("please choose a non-empty cell")
                 End If
             End If
         End If
     End Sub
-
-
-
-
 End Class

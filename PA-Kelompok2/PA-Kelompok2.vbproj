@@ -82,10 +82,10 @@
     <Compile Include="AdminMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Anime.Designer.vb">
-      <DependentUpon>Anime.vb</DependentUpon>
+    <Compile Include="AnimeCreate.Designer.vb">
+      <DependentUpon>AnimeCreate.vb</DependentUpon>
     </Compile>
-    <Compile Include="Anime.vb">
+    <Compile Include="AnimeCreate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AnimeInfo.Designer.vb">
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Anime.resx">
-      <DependentUpon>Anime.vb</DependentUpon>
+    <EmbeddedResource Include="AnimeCreate.resx">
+      <DependentUpon>AnimeCreate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnimeInfo.resx">
       <DependentUpon>AnimeInfo.vb</DependentUpon>

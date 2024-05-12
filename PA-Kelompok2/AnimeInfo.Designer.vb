@@ -22,7 +22,7 @@ Partial Class AnimeInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblSynopsis = New System.Windows.Forms.Label()
@@ -58,21 +58,23 @@ Partial Class AnimeInfo
         Me.btnUpdateRev = New System.Windows.Forms.Button()
         Me.lblGenre = New System.Windows.Forms.Label()
         Me.btnAddRev = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblId = New System.Windows.Forms.Label()
+        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'picboxPoster
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(46, 86)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 300)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picboxPoster.BackColor = System.Drawing.Color.Transparent
+        Me.picboxPoster.Location = New System.Drawing.Point(46, 86)
+        Me.picboxPoster.Name = "picboxPoster"
+        Me.picboxPoster.Size = New System.Drawing.Size(206, 300)
+        Me.picboxPoster.TabIndex = 0
+        Me.picboxPoster.TabStop = False
         '
         'lblTitle
         '
@@ -199,7 +201,7 @@ Partial Class AnimeInfo
         '
         Me.lblStudio.AutoSize = True
         Me.lblStudio.BackColor = System.Drawing.Color.Transparent
-        Me.lblStudio.Location = New System.Drawing.Point(120, 534)
+        Me.lblStudio.Location = New System.Drawing.Point(120, 535)
         Me.lblStudio.Name = "lblStudio"
         Me.lblStudio.Size = New System.Drawing.Size(10, 16)
         Me.lblStudio.TabIndex = 10
@@ -209,7 +211,7 @@ Partial Class AnimeInfo
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(43, 534)
+        Me.Label5.Location = New System.Drawing.Point(43, 535)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 16)
         Me.Label5.TabIndex = 4
@@ -219,7 +221,7 @@ Partial Class AnimeInfo
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(43, 566)
+        Me.Label6.Location = New System.Drawing.Point(43, 563)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(50, 16)
         Me.Label6.TabIndex = 5
@@ -239,7 +241,7 @@ Partial Class AnimeInfo
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(43, 456)
+        Me.Label2.Location = New System.Drawing.Point(43, 451)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 16)
         Me.Label2.TabIndex = 1
@@ -249,7 +251,7 @@ Partial Class AnimeInfo
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(43, 482)
+        Me.Label3.Location = New System.Drawing.Point(43, 479)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 16)
         Me.Label3.TabIndex = 2
@@ -259,7 +261,7 @@ Partial Class AnimeInfo
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(43, 509)
+        Me.Label4.Location = New System.Drawing.Point(43, 507)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 16)
         Me.Label4.TabIndex = 3
@@ -279,7 +281,7 @@ Partial Class AnimeInfo
         '
         Me.lblStatus.AutoSize = True
         Me.lblStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblStatus.Location = New System.Drawing.Point(120, 456)
+        Me.lblStatus.Location = New System.Drawing.Point(120, 451)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(10, 16)
         Me.lblStatus.TabIndex = 7
@@ -289,7 +291,7 @@ Partial Class AnimeInfo
         '
         Me.lblSeason.AutoSize = True
         Me.lblSeason.BackColor = System.Drawing.Color.Transparent
-        Me.lblSeason.Location = New System.Drawing.Point(120, 482)
+        Me.lblSeason.Location = New System.Drawing.Point(120, 479)
         Me.lblSeason.Name = "lblSeason"
         Me.lblSeason.Size = New System.Drawing.Size(10, 16)
         Me.lblSeason.TabIndex = 8
@@ -299,7 +301,7 @@ Partial Class AnimeInfo
         '
         Me.lblYear.AutoSize = True
         Me.lblYear.BackColor = System.Drawing.Color.Transparent
-        Me.lblYear.Location = New System.Drawing.Point(120, 509)
+        Me.lblYear.Location = New System.Drawing.Point(120, 507)
         Me.lblYear.Name = "lblYear"
         Me.lblYear.Size = New System.Drawing.Size(10, 16)
         Me.lblYear.TabIndex = 9
@@ -321,7 +323,7 @@ Partial Class AnimeInfo
         Me.lblRank.BackColor = System.Drawing.Color.Transparent
         Me.lblRank.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRank.ForeColor = System.Drawing.Color.White
-        Me.lblRank.Location = New System.Drawing.Point(68, 15)
+        Me.lblRank.Location = New System.Drawing.Point(72, 15)
         Me.lblRank.Name = "lblRank"
         Me.lblRank.Size = New System.Drawing.Size(45, 20)
         Me.lblRank.TabIndex = 1
@@ -355,7 +357,7 @@ Partial Class AnimeInfo
         Me.lblScore.BackColor = System.Drawing.Color.Transparent
         Me.lblScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblScore.ForeColor = System.Drawing.Color.White
-        Me.lblScore.Location = New System.Drawing.Point(75, 15)
+        Me.lblScore.Location = New System.Drawing.Point(79, 15)
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(56, 20)
         Me.lblScore.TabIndex = 2
@@ -431,9 +433,9 @@ Partial Class AnimeInfo
         'lblGenre
         '
         Me.lblGenre.BackColor = System.Drawing.Color.Transparent
-        Me.lblGenre.Location = New System.Drawing.Point(120, 566)
+        Me.lblGenre.Location = New System.Drawing.Point(120, 563)
         Me.lblGenre.Name = "lblGenre"
-        Me.lblGenre.Size = New System.Drawing.Size(10, 16)
+        Me.lblGenre.Size = New System.Drawing.Size(132, 80)
         Me.lblGenre.TabIndex = 35
         Me.lblGenre.Text = ":"
         '
@@ -449,12 +451,32 @@ Partial Class AnimeInfo
         Me.btnAddRev.Text = "Add Review"
         Me.btnAddRev.UseVisualStyleBackColor = False
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(43, 9)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(24, 16)
+        Me.Label12.TabIndex = 37
+        Me.Label12.Text = "Id: "
+        '
+        'lblId
+        '
+        Me.lblId.AutoSize = True
+        Me.lblId.Location = New System.Drawing.Point(72, 9)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(10, 16)
+        Me.lblId.TabIndex = 38
+        Me.lblId.Text = ":"
+        '
         'AnimeInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(959, 698)
+        Me.Controls.Add(Me.lblId)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnAddRev)
         Me.Controls.Add(Me.lblGenre)
         Me.Controls.Add(Me.btnDeleteRev)
@@ -482,10 +504,10 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.lblEpisode)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picboxPoster)
         Me.Name = "AnimeInfo"
         Me.Text = "AnimeInfo"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -499,7 +521,7 @@ Partial Class AnimeInfo
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picboxPoster As PictureBox
     Friend WithEvents lblTitle As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lblSynopsis As Label
@@ -535,4 +557,6 @@ Partial Class AnimeInfo
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblGenre As Label
     Friend WithEvents btnAddRev As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents lblId As Label
 End Class
