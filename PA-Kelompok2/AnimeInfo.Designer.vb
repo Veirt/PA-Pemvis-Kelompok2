@@ -73,6 +73,7 @@ Partial Class AnimeInfo
         Me.picboxPoster.Location = New System.Drawing.Point(46, 86)
         Me.picboxPoster.Name = "picboxPoster"
         Me.picboxPoster.Size = New System.Drawing.Size(206, 300)
+        Me.picboxPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picboxPoster.TabIndex = 0
         Me.picboxPoster.TabStop = False
         '
