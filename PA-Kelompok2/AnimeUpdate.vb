@@ -154,6 +154,7 @@ Public Class AnimeUpdate
         End Using
         SuccessMsg("Data berhasil diupdate!")
         AnimeInfo.FillData(txtID.Text)
+        ReloadData()
         Me.Close()
     End Sub
 
