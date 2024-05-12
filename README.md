@@ -2,11 +2,11 @@
 
 - [x] Login
 - [x] Register
-- [ ] Admin
+- [x] Admin
 
   - [x] Create
-  - [ ] Read all/update/delete
-  - [ ] Read individually
+  - [x] Read all/update/delete
+  - [x] Read individually
   - [x] Log out
 
 - [ ] User
