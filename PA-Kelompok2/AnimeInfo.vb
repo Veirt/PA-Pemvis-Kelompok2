@@ -50,6 +50,7 @@ Public Class AnimeInfo
             cmd.ExecuteNonQuery()
         End Using
         SuccessMsg("Data berhasil dihapus!")
+        ReloadData()
         Me.Close()
     End Sub
 
