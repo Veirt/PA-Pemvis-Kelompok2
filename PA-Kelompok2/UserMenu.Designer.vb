@@ -123,7 +123,6 @@ Partial Class UserMenu
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "UserMenu"
         Me.Text = "UserMenu"
         Me.ResumeLayout(False)

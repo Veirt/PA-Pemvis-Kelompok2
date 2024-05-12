@@ -15,8 +15,11 @@ Public Class AnimeInfo
         lblYear.Text = RD("year")
         lblSeason.Text = RD("season")
         lblStudio.Text = RD("studio")
+        'Genre Masih Error
         lblGenre.Text = RD("genre")
+        'Image Belum Ada
         RD.Close()
+
     End Sub
     Private Sub AnimeInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Session.Role = "user" Then
@@ -37,7 +40,9 @@ Public Class AnimeInfo
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-
+        'Update Masih Error
+        AnimeUpdate.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnUpdateRev_Click(sender As Object, e As EventArgs) Handles btnUpdateRev.Click

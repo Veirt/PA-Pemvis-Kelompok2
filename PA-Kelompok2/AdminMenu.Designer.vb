@@ -136,7 +136,6 @@ Partial Class AdminMenu
         Me.Controls.Add(Me.lblAdmin)
         Me.Controls.Add(Me.lblWelcome)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "AdminMenu"
         Me.Text = "AdminMenu"
         Me.ResumeLayout(False)
