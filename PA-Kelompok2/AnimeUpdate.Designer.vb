@@ -46,6 +46,7 @@ Partial Class AnimeUpdate
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,7 +123,7 @@ Partial Class AnimeUpdate
         '
         Me.lblStatus.AutoSize = True
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(20, 435)
+        Me.lblStatus.Location = New System.Drawing.Point(20, 492)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(66, 22)
@@ -133,8 +134,8 @@ Partial Class AnimeUpdate
         '
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
-        Me.cmbStatus.Location = New System.Drawing.Point(182, 433)
+        Me.cmbStatus.Items.AddRange(New Object() {"Airing", "Finished", "Upcoming"})
+        Me.cmbStatus.Location = New System.Drawing.Point(182, 490)
         Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
@@ -144,7 +145,7 @@ Partial Class AnimeUpdate
         '
         Me.lblSeason.AutoSize = True
         Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeason.Location = New System.Drawing.Point(20, 488)
+        Me.lblSeason.Location = New System.Drawing.Point(20, 439)
         Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeason.Name = "lblSeason"
         Me.lblSeason.Size = New System.Drawing.Size(76, 22)
@@ -156,7 +157,7 @@ Partial Class AnimeUpdate
         Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSeason.FormattingEnabled = True
         Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
-        Me.cmbSeason.Location = New System.Drawing.Point(182, 486)
+        Me.cmbSeason.Location = New System.Drawing.Point(182, 437)
         Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbSeason.Name = "cmbSeason"
         Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
@@ -294,6 +295,10 @@ Partial Class AnimeUpdate
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'OpenFileDialog2
+        '
+        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
+        '
         'AnimeUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -356,4 +361,5 @@ Partial Class AnimeUpdate
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents OpenFileDialog2 As OpenFileDialog
 End Class

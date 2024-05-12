@@ -214,7 +214,7 @@ Partial Class Anime
         Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSeason.FormattingEnabled = True
         Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
-        Me.cmbSeason.Location = New System.Drawing.Point(178, 438)
+        Me.cmbSeason.Location = New System.Drawing.Point(178, 385)
         Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbSeason.Name = "cmbSeason"
         Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
@@ -224,7 +224,7 @@ Partial Class Anime
         '
         Me.lblSeason.AutoSize = True
         Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeason.Location = New System.Drawing.Point(16, 440)
+        Me.lblSeason.Location = New System.Drawing.Point(16, 389)
         Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeason.Name = "lblSeason"
         Me.lblSeason.Size = New System.Drawing.Size(76, 22)
@@ -236,7 +236,7 @@ Partial Class Anime
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.FormattingEnabled = True
         Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
-        Me.cmbStatus.Location = New System.Drawing.Point(178, 385)
+        Me.cmbStatus.Location = New System.Drawing.Point(178, 438)
         Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
@@ -246,7 +246,7 @@ Partial Class Anime
         '
         Me.lblStatus.AutoSize = True
         Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(16, 387)
+        Me.lblStatus.Location = New System.Drawing.Point(16, 440)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(66, 22)

@@ -16,13 +16,19 @@ Public Class AnimeRead
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        AnimeInfo.Show()
-        Me.Hide()
+
+
 
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim row As DataGridViewRow = DataGridView1.SelectedRows(0)
             If row.Index < DataGridView1.RowCount And row.Index >= 0 Then
-                AnimeUpdate.FillData(row.Cells(0).Value)
+                Dim cellValue As Object = row.Cells(0).Value
+                If cellValue IsNot DBNull.Value Then
+                    AnimeUpdate.Show()
+                    AnimeUpdate.FillData(cellValue.ToString())
+                Else
+                    ErrorMsg("please choose a non-empty cell")
+                End If
             End If
         End If
     End Sub

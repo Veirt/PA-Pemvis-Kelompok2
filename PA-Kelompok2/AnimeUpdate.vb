@@ -53,18 +53,33 @@ Public Class AnimeUpdate
         End If
 
         Dim yearInt As Integer = Integer.Parse(txtYear.Text)
+        Dim season As String = cmbSeason.Text
         Dim currentYear As Integer = DateTime.Now.Year
+        Dim currentMonth As Integer = DateTime.Now.Month
 
-        If yearInt < currentYear Then
-            cmbStatus.Items.Add("Airing")
+        If yearInt < currentYear Or (yearInt = currentYear And SeasonIsPast(season, currentMonth)) Then
             cmbStatus.Items.Add("Finished")
-        ElseIf yearInt = currentYear Then
+        ElseIf yearInt = currentYear And Not SeasonIsPast(season, currentMonth) Then
             cmbStatus.Items.Add("Airing")
-            cmbStatus.Items.Add("Finished")
         ElseIf yearInt > currentYear Then
             cmbStatus.Items.Add("Upcoming")
         End If
     End Sub
+
+    Private Function SeasonIsPast(season As String, currentMonth As Integer) As Boolean
+        Select Case season
+            Case "spring"
+                Return currentMonth >= 4 'april-may-june
+            Case "summer"
+                Return currentMonth >= 7 'july-august-september
+            Case "fall"
+                Return currentMonth >= 10 'october-november-december
+            Case "winter"
+                Return currentMonth >= 1 AndAlso currentMonth < 4 'january-february-march
+            Case Else
+                Return False
+        End Select
+    End Function
 
     Function GetGenres(clb As CheckedListBox)
         Dim checkedItems As New List(Of String)
@@ -112,6 +127,8 @@ Public Class AnimeUpdate
 
             cmd.ExecuteNonQuery()
         End Using
+        SuccessMsg("Data berhasil diupdate!")
+        Me.Close()
     End Sub
 
     ' TODO: delete
@@ -123,6 +140,7 @@ Public Class AnimeUpdate
             cmd.ExecuteNonQuery()
         End Using
         SuccessMsg("Data berhasil dihapus!")
+        Me.Close()
     End Sub
 
     Private Sub btnBrowsePoster_Click(sender As Object, e As EventArgs) Handles btnBrowsePoster.Click
