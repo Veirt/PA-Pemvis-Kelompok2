@@ -116,6 +116,7 @@ Public Class AnimeUpdate
 
     ' TODO: delete
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
         Dim query As String = "DELETE FROM anime WHERE id = @id"
         Using cmd As New MySqlCommand(query, CONN)
             cmd.Parameters.AddWithValue("@id", txtID.Text)

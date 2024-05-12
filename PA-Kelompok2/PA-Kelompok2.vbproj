@@ -88,6 +88,12 @@
     <Compile Include="Anime.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AnimeInfo.Designer.vb">
+      <DependentUpon>AnimeInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnimeInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AnimeRead.Designer.vb">
       <DependentUpon>AnimeRead.vb</DependentUpon>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Anime.resx">
       <DependentUpon>Anime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimeInfo.resx">
+      <DependentUpon>AnimeInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnimeRead.resx">
       <DependentUpon>AnimeRead.vb</DependentUpon>
