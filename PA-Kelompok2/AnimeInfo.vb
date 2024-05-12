@@ -36,9 +36,22 @@ Public Class AnimeInfo
             btnAddRev.Hide()
         End If
 
+        If HasExistingReview(Session.UserId, lblId.Text) Then
+            btnAddRev.Hide()
+        Else
+            btnUpdateRev.Hide()
+            btnDeleteRev.Hide()
+        End If
     End Sub
 
-
+    Private Function HasExistingReview(id_user As Integer, id_anime As Integer) As Boolean
+        ' Check if the user already reviewed this anime
+        Dim queryCheck As String = $"SELECT COUNT(*) FROM reviews WHERE id_user = {id_user} AND id_anime = {id_anime}"
+        Using CMDCheck As New MySqlCommand(queryCheck, CONN)
+            Dim count As Integer = Convert.ToInt32(CMDCheck.ExecuteScalar())
+            Return count > 0
+        End Using
+    End Function
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         AnimeUpdate.FillData(lblId.Text)
