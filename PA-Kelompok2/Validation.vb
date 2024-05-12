@@ -61,14 +61,16 @@ Module Validation
             Return False
         End If
 
-        Dim ONE_MB = 1048576
-        Using ms As New MemoryStream()
-            poster.Image.Save(ms, poster.Image.RawFormat)
-            If ms.Length > ONE_MB Then
-                ErrorMsg("Poster tidak boleh lebih dari 1MB")
-                Return False
-            End If
-        End Using
+        If AnimeUpdate.picboxPoster.ImageLocation <> "" Then
+            Dim ONE_MB = 1048576
+            Using ms As New MemoryStream()
+                poster.Image.Save(ms, poster.Image.RawFormat)
+                If ms.Length > ONE_MB Then
+                    ErrorMsg("Poster tidak boleh lebih dari 1MB")
+                    Return False
+                End If
+            End Using
+        End If
 
         Return True
     End Function

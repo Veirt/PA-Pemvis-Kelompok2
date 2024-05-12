@@ -78,13 +78,18 @@ Public Class AnimeUpdate
 
     ' TODO: update
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-
         If Not ValidateAnime(txtNamaAnime.Text, txtSinopsis.Text, txtJumlahEpisode.Text, GetGenres(clbGenres),
                              cmbSeason.Text, txtYear.Text, cmbStatus.Text, txtStudio.Text, picboxPoster) Then
             Return
         End If
 
-        Dim query As String = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio, poster = @poster WHERE id = @id"
+        Dim query As String
+        If picboxPoster.ImageLocation <> Nothing Then
+            query = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio, poster = @poster WHERE id = @id"
+
+        Else
+            query = "UPDATE anime SET title = @title, synopsis = @synopsis, episodes = @episodes, genre = @genre, season = @season, year = @year, status = @status, studio = @studio WHERE id = @id"
+        End If
         Using cmd As New MySqlCommand(query, CONN)
             cmd.Parameters.AddWithValue("@id", txtID.Text)
             cmd.Parameters.AddWithValue("@title", txtNamaAnime.Text)
@@ -96,14 +101,14 @@ Public Class AnimeUpdate
             cmd.Parameters.AddWithValue("@status", cmbStatus.Text)
             cmd.Parameters.AddWithValue("@studio", txtStudio.Text)
 
-            ' masukkan poster dalam format byte/mediumblob di database
-            Dim poster As Byte()
-            Using ms As New MemoryStream()
-                picboxPoster.Image.Save(ms, picboxPoster.Image.RawFormat)
-                poster = ms.ToArray()
-            End Using
-
-            cmd.Parameters.AddWithValue("@poster", poster)
+            If picboxPoster.ImageLocation <> Nothing Then
+                Dim poster As Byte()
+                Using ms As New MemoryStream()
+                    picboxPoster.Image.Save(ms, picboxPoster.Image.RawFormat)
+                    poster = ms.ToArray()
+                End Using
+                cmd.Parameters.AddWithValue("@poster", poster)
+            End If
 
             cmd.ExecuteNonQuery()
         End Using
@@ -111,7 +116,12 @@ Public Class AnimeUpdate
 
     ' TODO: delete
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-
+        Dim query As String = "DELETE FROM anime WHERE id = @id"
+        Using cmd As New MySqlCommand(query, CONN)
+            cmd.Parameters.AddWithValue("@id", txtID.Text)
+            cmd.ExecuteNonQuery()
+        End Using
+        SuccessMsg("Data berhasil dihapus!")
     End Sub
 
     Private Sub btnBrowsePoster_Click(sender As Object, e As EventArgs) Handles btnBrowsePoster.Click
