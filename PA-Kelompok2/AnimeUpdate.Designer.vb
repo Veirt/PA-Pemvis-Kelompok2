@@ -43,6 +43,8 @@ Partial Class AnimeUpdate
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblID = New System.Windows.Forms.Label()
         Me.clbGenres = New System.Windows.Forms.CheckedListBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -128,6 +130,7 @@ Partial Class AnimeUpdate
         '
         'cmbStatus
         '
+        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.FormattingEnabled = True
         Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
         Me.cmbStatus.Location = New System.Drawing.Point(182, 433)
@@ -149,6 +152,7 @@ Partial Class AnimeUpdate
         '
         'cmbSeason
         '
+        Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSeason.FormattingEnabled = True
         Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
         Me.cmbSeason.Location = New System.Drawing.Point(182, 486)
@@ -233,6 +237,7 @@ Partial Class AnimeUpdate
         '
         'txtID
         '
+        Me.txtID.Enabled = False
         Me.txtID.Location = New System.Drawing.Point(182, 13)
         Me.txtID.Margin = New System.Windows.Forms.Padding(4)
         Me.txtID.Name = "txtID"
@@ -260,12 +265,38 @@ Partial Class AnimeUpdate
         Me.clbGenres.Size = New System.Drawing.Size(160, 118)
         Me.clbGenres.TabIndex = 21
         '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnDelete.Location = New System.Drawing.Point(775, 571)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(112, 42)
+        Me.btnDelete.TabIndex = 24
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnUpdate.Location = New System.Drawing.Point(657, 571)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(112, 42)
+        Me.btnUpdate.TabIndex = 23
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
+        '
         'AnimeUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(928, 639)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.clbGenres)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.lblID)
@@ -317,4 +348,6 @@ Partial Class AnimeUpdate
     Friend WithEvents txtID As TextBox
     Friend WithEvents lblID As Label
     Friend WithEvents clbGenres As CheckedListBox
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnUpdate As Button
 End Class

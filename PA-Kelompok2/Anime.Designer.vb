@@ -29,21 +29,21 @@ Partial Class Anime
         Me.lblJumlahEpisode = New System.Windows.Forms.Label()
         Me.txtJumlahEpisode = New System.Windows.Forms.TextBox()
         Me.lblGenre = New System.Windows.Forms.Label()
-        Me.lblStatus = New System.Windows.Forms.Label()
-        Me.cmbStatus = New System.Windows.Forms.ComboBox()
-        Me.lblSeason = New System.Windows.Forms.Label()
-        Me.cmbSeason = New System.Windows.Forms.ComboBox()
-        Me.lblYear = New System.Windows.Forms.Label()
-        Me.txtYear = New System.Windows.Forms.TextBox()
         Me.lblStudio = New System.Windows.Forms.Label()
         Me.txtStudio = New System.Windows.Forms.TextBox()
         Me.lblPoster = New System.Windows.Forms.Label()
         Me.btnBrowsePoster = New System.Windows.Forms.Button()
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.clbGenres = New System.Windows.Forms.CheckedListBox()
-        Me.btnCreate = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.txtYear = New System.Windows.Forms.TextBox()
+        Me.lblYear = New System.Windows.Forms.Label()
+        Me.cmbSeason = New System.Windows.Forms.ComboBox()
+        Me.lblSeason = New System.Windows.Forms.Label()
+        Me.cmbStatus = New System.Windows.Forms.ComboBox()
+        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.btnCreate = New System.Windows.Forms.Button()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -116,69 +116,6 @@ Partial Class Anime
         Me.lblGenre.TabIndex = 6
         Me.lblGenre.Text = "Genre:"
         '
-        'lblStatus
-        '
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatus.Location = New System.Drawing.Point(15, 443)
-        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(66, 22)
-        Me.lblStatus.TabIndex = 8
-        Me.lblStatus.Text = "Status:"
-        '
-        'cmbStatus
-        '
-        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
-        Me.cmbStatus.Location = New System.Drawing.Point(177, 441)
-        Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
-        Me.cmbStatus.Name = "cmbStatus"
-        Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
-        Me.cmbStatus.TabIndex = 9
-        '
-        'lblSeason
-        '
-        Me.lblSeason.AutoSize = True
-        Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeason.Location = New System.Drawing.Point(16, 384)
-        Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblSeason.Name = "lblSeason"
-        Me.lblSeason.Size = New System.Drawing.Size(76, 22)
-        Me.lblSeason.TabIndex = 10
-        Me.lblSeason.Text = "Season:"
-        '
-        'cmbSeason
-        '
-        Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbSeason.FormattingEnabled = True
-        Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
-        Me.cmbSeason.Location = New System.Drawing.Point(178, 382)
-        Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
-        Me.cmbSeason.Name = "cmbSeason"
-        Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
-        Me.cmbSeason.TabIndex = 11
-        '
-        'lblYear
-        '
-        Me.lblYear.AutoSize = True
-        Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblYear.Location = New System.Drawing.Point(368, 382)
-        Me.lblYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblYear.Name = "lblYear"
-        Me.lblYear.Size = New System.Drawing.Size(53, 22)
-        Me.lblYear.TabIndex = 12
-        Me.lblYear.Text = "Year:"
-        '
-        'txtYear
-        '
-        Me.txtYear.Location = New System.Drawing.Point(429, 384)
-        Me.txtYear.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtYear.Name = "txtYear"
-        Me.txtYear.Size = New System.Drawing.Size(88, 22)
-        Me.txtYear.TabIndex = 13
-        '
         'lblStudio
         '
         Me.lblStudio.AutoSize = True
@@ -245,18 +182,6 @@ Partial Class Anime
         Me.clbGenres.Size = New System.Drawing.Size(160, 118)
         Me.clbGenres.TabIndex = 19
         '
-        'btnCreate
-        '
-        Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
-        Me.btnCreate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
-        Me.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCreate.Location = New System.Drawing.Point(771, 506)
-        Me.btnCreate.Name = "btnCreate"
-        Me.btnCreate.Size = New System.Drawing.Size(112, 42)
-        Me.btnCreate.TabIndex = 20
-        Me.btnCreate.Text = "Create"
-        Me.btnCreate.UseVisualStyleBackColor = False
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -265,25 +190,100 @@ Partial Class Anime
         '
         Me.SaveFileDialog1.FileName = "g"
         '
+        'txtYear
+        '
+        Me.txtYear.Location = New System.Drawing.Point(432, 389)
+        Me.txtYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtYear.Name = "txtYear"
+        Me.txtYear.Size = New System.Drawing.Size(88, 22)
+        Me.txtYear.TabIndex = 27
+        '
+        'lblYear
+        '
+        Me.lblYear.AutoSize = True
+        Me.lblYear.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblYear.Location = New System.Drawing.Point(371, 387)
+        Me.lblYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblYear.Name = "lblYear"
+        Me.lblYear.Size = New System.Drawing.Size(53, 22)
+        Me.lblYear.TabIndex = 26
+        Me.lblYear.Text = "Year:"
+        '
+        'cmbSeason
+        '
+        Me.cmbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbSeason.FormattingEnabled = True
+        Me.cmbSeason.Items.AddRange(New Object() {"Spring", "Summer", "Fall", "Winter"})
+        Me.cmbSeason.Location = New System.Drawing.Point(178, 438)
+        Me.cmbSeason.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbSeason.Name = "cmbSeason"
+        Me.cmbSeason.Size = New System.Drawing.Size(160, 24)
+        Me.cmbSeason.TabIndex = 25
+        '
+        'lblSeason
+        '
+        Me.lblSeason.AutoSize = True
+        Me.lblSeason.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeason.Location = New System.Drawing.Point(16, 440)
+        Me.lblSeason.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSeason.Name = "lblSeason"
+        Me.lblSeason.Size = New System.Drawing.Size(76, 22)
+        Me.lblSeason.TabIndex = 24
+        Me.lblSeason.Text = "Season:"
+        '
+        'cmbStatus
+        '
+        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbStatus.FormattingEnabled = True
+        Me.cmbStatus.Items.AddRange(New Object() {"Ongoing", "Finished", "Upcoming"})
+        Me.cmbStatus.Location = New System.Drawing.Point(178, 385)
+        Me.cmbStatus.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbStatus.Name = "cmbStatus"
+        Me.cmbStatus.Size = New System.Drawing.Size(160, 24)
+        Me.cmbStatus.TabIndex = 23
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.Location = New System.Drawing.Point(16, 387)
+        Me.lblStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(66, 22)
+        Me.lblStatus.TabIndex = 22
+        Me.lblStatus.Text = "Status:"
+        '
+        'btnCreate
+        '
+        Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnCreate.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCreate.Location = New System.Drawing.Point(767, 538)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(112, 42)
+        Me.btnCreate.TabIndex = 28
+        Me.btnCreate.Text = "Create"
+        Me.btnCreate.UseVisualStyleBackColor = False
+        '
         'Anime
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(928, 569)
+        Me.ClientSize = New System.Drawing.Size(928, 603)
         Me.Controls.Add(Me.btnCreate)
-        Me.Controls.Add(Me.clbGenres)
-        Me.Controls.Add(Me.picboxPoster)
-        Me.Controls.Add(Me.btnBrowsePoster)
-        Me.Controls.Add(Me.lblPoster)
-        Me.Controls.Add(Me.txtStudio)
-        Me.Controls.Add(Me.lblStudio)
         Me.Controls.Add(Me.txtYear)
         Me.Controls.Add(Me.lblYear)
         Me.Controls.Add(Me.cmbSeason)
         Me.Controls.Add(Me.lblSeason)
         Me.Controls.Add(Me.cmbStatus)
         Me.Controls.Add(Me.lblStatus)
+        Me.Controls.Add(Me.clbGenres)
+        Me.Controls.Add(Me.picboxPoster)
+        Me.Controls.Add(Me.btnBrowsePoster)
+        Me.Controls.Add(Me.lblPoster)
+        Me.Controls.Add(Me.txtStudio)
+        Me.Controls.Add(Me.lblStudio)
         Me.Controls.Add(Me.lblGenre)
         Me.Controls.Add(Me.txtJumlahEpisode)
         Me.Controls.Add(Me.lblJumlahEpisode)
@@ -307,19 +307,19 @@ Partial Class Anime
     Friend WithEvents lblJumlahEpisode As Label
     Friend WithEvents txtJumlahEpisode As TextBox
     Friend WithEvents lblGenre As Label
-    Friend WithEvents lblStatus As Label
-    Friend WithEvents cmbStatus As ComboBox
-    Friend WithEvents lblSeason As Label
-    Friend WithEvents cmbSeason As ComboBox
-    Friend WithEvents lblYear As Label
-    Friend WithEvents txtYear As TextBox
     Friend WithEvents lblStudio As Label
     Friend WithEvents txtStudio As TextBox
     Friend WithEvents lblPoster As Label
     Friend WithEvents btnBrowsePoster As Button
     Friend WithEvents picboxPoster As PictureBox
     Friend WithEvents clbGenres As CheckedListBox
-    Friend WithEvents btnCreate As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents txtYear As TextBox
+    Friend WithEvents lblYear As Label
+    Friend WithEvents cmbSeason As ComboBox
+    Friend WithEvents lblSeason As Label
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents lblStatus As Label
+    Friend WithEvents btnCreate As Button
 End Class
