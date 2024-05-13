@@ -55,6 +55,7 @@ Public Class Review
             End If
 
             AnimeInfo.HideAndShowComponents()
+            AnimeInfo.FillData(id_anime)
 
             Me.Close()
         Else
