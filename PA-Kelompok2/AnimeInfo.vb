@@ -26,7 +26,8 @@ Public Class AnimeInfo
 
         RD.Close()
     End Sub
-    Private Sub AnimeInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    Public Sub HideAndShowComponents()
         If Session.Role = "user" Then
             btnUpdate.Hide()
             btnDelete.Hide()
@@ -36,22 +37,21 @@ Public Class AnimeInfo
             btnAddRev.Hide()
         End If
 
-        If HasExistingReview(Session.UserId, lblId.Text) Then
+        If Review.HasExistingReview(Session.UserId, lblId.Text) Then
             btnAddRev.Hide()
+            btnUpdateRev.Show()
+            btnDeleteRev.Show()
         Else
             btnUpdateRev.Hide()
             btnDeleteRev.Hide()
+            btnAddRev.Show()
         End If
     End Sub
 
-    Private Function HasExistingReview(id_user As Integer, id_anime As Integer) As Boolean
-        ' Check if the user already reviewed this anime
-        Dim queryCheck As String = $"SELECT COUNT(*) FROM reviews WHERE id_user = {id_user} AND id_anime = {id_anime}"
-        Using CMDCheck As New MySqlCommand(queryCheck, CONN)
-            Dim count As Integer = Convert.ToInt32(CMDCheck.ExecuteScalar())
-            Return count > 0
-        End Using
-    End Function
+
+    Private Sub AnimeInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HideAndShowComponents()
+    End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         AnimeUpdate.FillData(lblId.Text)
@@ -66,7 +66,6 @@ Public Class AnimeInfo
         End Using
         SuccessMsg("Data berhasil dihapus!")
         ReloadData()
-        Me.Close()
     End Sub
 
     Private Sub btnUpdateRev_Click(sender As Object, e As EventArgs) Handles btnUpdateRev.Click
@@ -81,7 +80,7 @@ Public Class AnimeInfo
         End Using
         SuccessMsg("Review berhasil dihapus!")
         ReloadData()
-        Me.Close()
+        HideAndShowComponents()
     End Sub
 
     Private Sub btnAddRev_Click(sender As Object, e As EventArgs) Handles btnAddRev.Click

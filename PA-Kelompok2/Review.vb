@@ -53,13 +53,16 @@ Public Class Review
                 End Using
                 SuccessMsg("Review berhasil ditambahkan!")
             End If
+
+            AnimeInfo.HideAndShowComponents()
+
             Me.Close()
         Else
             MsgBox("Comment masih kosong. harap diisi dengan benar.")
         End If
     End Sub
 
-    Private Function HasExistingReview(id_user As Integer, id_anime As Integer) As Boolean
+    Public Function HasExistingReview(id_user As Integer, id_anime As Integer) As Boolean
         ' Check if the user already reviewed this anime
         Dim queryCheck As String = $"SELECT COUNT(*) FROM reviews WHERE id_user = {id_user} AND id_anime = {id_anime}"
         Using CMDCheck As New MySqlCommand(queryCheck, CONN)
