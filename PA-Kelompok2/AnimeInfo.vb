@@ -98,9 +98,29 @@ Public Class AnimeInfo
         ' isi review nya
         GetUserReviews(lblId.Text)
         lblTotalReview.Text = userReviews.Count
-        lblUsername.Text = userReviews(currentReviewIdx).username
-        lblScoreUser.Text = userReviews(currentReviewIdx).rating
-        lblReview.Text = userReviews(currentReviewIdx).comment
+        If userReviews.Count > 0 Then
+            lblUsername.Text = userReviews(currentReviewIdx).username
+            lblScoreUser.Text = userReviews(currentReviewIdx).rating
+            lblReview.Text = userReviews(currentReviewIdx).comment
+            btnPrev.Show()
+            btnNext.Show()
+            Star.Show()
+            lblCurrent.Show()
+            Label13.Show() ' of
+            lblTotalReview.Show()
+            Label14.Show() ' Review(s)
+        Else
+            lblUsername.Text = "No Reviews yet."
+            lblScoreUser.Text = ""
+            lblReview.Text = ""
+            btnPrev.Hide()
+            btnNext.Hide()
+            Star.Hide()
+            lblCurrent.Hide()
+            Label13.Hide() ' of
+            lblTotalReview.Hide()
+            Label14.Hide() ' Review(s)
+        End If
     End Sub
 
     ' Modulus yang ada di VB beda sama yang ada di Python dan bahasa lain.
