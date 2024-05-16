@@ -196,11 +196,12 @@ Public Class AnimeInfo
     End Sub
 
     Private Sub btnDeleteRev_Click(sender As Object, e As EventArgs) Handles btnDeleteRev.Click
-        Dim query As String = "DELETE FROM reviews WHERE id_anime = @id_anime"
-        Using cmd As New MySqlCommand(query, CONN)
-            cmd.Parameters.AddWithValue("@id_anime", lblId.Text)
-            cmd.ExecuteNonQuery()
-        End Using
+        Dim query As String = "DELETE FROM reviews WHERE id_anime = @id_anime AND id_user = @id_user"
+        CMD = New MySqlCommand(query, CONN)
+        CMD.Parameters.AddWithValue("@id_anime", lblId.Text)
+        CMD.Parameters.AddWithValue("@id_user", Session.UserId)
+        CMD.ExecuteNonQuery()
+
         SuccessMsg("Review berhasil dihapus!")
         ReloadData()
         HideAndShowComponents()
