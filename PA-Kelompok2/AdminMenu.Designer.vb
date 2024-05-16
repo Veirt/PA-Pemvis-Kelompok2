@@ -26,22 +26,20 @@ Partial Class AdminMenu
         Me.lblAdmin = New System.Windows.Forms.Label()
         Me.btnCreate = New System.Windows.Forms.Button()
         Me.btnRead = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblWelcome
         '
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.Color.Transparent
-        Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(15, 15)
+        Me.lblWelcome.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.ForeColor = System.Drawing.Color.White
+        Me.lblWelcome.Location = New System.Drawing.Point(11, 15)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(140, 32)
+        Me.lblWelcome.Size = New System.Drawing.Size(138, 38)
         Me.lblWelcome.TabIndex = 0
         Me.lblWelcome.Text = "Welcome,"
         '
@@ -49,18 +47,20 @@ Partial Class AdminMenu
         '
         Me.lblAdmin.AutoSize = True
         Me.lblAdmin.BackColor = System.Drawing.Color.Transparent
-        Me.lblAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdmin.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdmin.ForeColor = System.Drawing.Color.White
         Me.lblAdmin.Location = New System.Drawing.Point(146, 15)
         Me.lblAdmin.Name = "lblAdmin"
-        Me.lblAdmin.Size = New System.Drawing.Size(95, 32)
+        Me.lblAdmin.Size = New System.Drawing.Size(98, 38)
         Me.lblAdmin.TabIndex = 1
         Me.lblAdmin.Text = "Admin"
         '
         'btnCreate
         '
-        Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.btnCreate.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnCreate.Font = New System.Drawing.Font("Segoe UI", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnCreate.ForeColor = System.Drawing.Color.White
-        Me.btnCreate.Location = New System.Drawing.Point(306, 131)
+        Me.btnCreate.Location = New System.Drawing.Point(300, 101)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(169, 58)
         Me.btnCreate.TabIndex = 2
@@ -69,85 +69,55 @@ Partial Class AdminMenu
         '
         'btnRead
         '
-        Me.btnRead.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.btnRead.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(68, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.btnRead.Font = New System.Drawing.Font("Segoe UI", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnRead.ForeColor = System.Drawing.Color.White
-        Me.btnRead.Location = New System.Drawing.Point(306, 237)
+        Me.btnRead.Location = New System.Drawing.Point(300, 207)
         Me.btnRead.Name = "btnRead"
         Me.btnRead.Size = New System.Drawing.Size(169, 58)
         Me.btnRead.TabIndex = 3
         Me.btnRead.Text = "View Anime"
         Me.btnRead.UseVisualStyleBackColor = False
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(789, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(12, 452)
-        Me.Panel4.TabIndex = 15
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(-1, -1)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(12, 452)
-        Me.Panel3.TabIndex = 14
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(0, 438)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(802, 16)
-        Me.Panel2.TabIndex = 13
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, -4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(802, 16)
-        Me.Panel1.TabIndex = 12
-        '
         'btnLogOut
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(106, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnLogOut.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold)
         Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(668, 12)
+        Me.btnLogOut.Location = New System.Drawing.Point(664, 12)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(124, 38)
         Me.btnLogOut.TabIndex = 16
         Me.btnLogOut.Text = "Log Out"
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
-        'Panel5
+        'PictureBox1
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(1, 51)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(802, 16)
-        Me.Panel5.TabIndex = 13
+        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.bg
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 321)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(801, 84)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
         '
         'AdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(83, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(800, 406)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnLogOut)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnRead)
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.lblAdmin)
         Me.Controls.Add(Me.lblWelcome)
-        Me.Controls.Add(Me.Panel5)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "AdminMenu"
         Me.Text = "AdminMenu"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -157,10 +127,6 @@ Partial Class AdminMenu
     Friend WithEvents lblAdmin As Label
     Friend WithEvents btnCreate As Button
     Friend WithEvents btnRead As Button
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents btnLogOut As Button
-    Friend WithEvents Panel5 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
