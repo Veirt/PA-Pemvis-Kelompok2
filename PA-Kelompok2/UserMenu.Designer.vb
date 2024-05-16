@@ -37,7 +37,7 @@ Partial Class UserMenu
         '
         Me.btnRead.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.btnRead.ForeColor = System.Drawing.Color.White
-        Me.btnRead.Location = New System.Drawing.Point(326, 197)
+        Me.btnRead.Location = New System.Drawing.Point(328, 197)
         Me.btnRead.Name = "btnRead"
         Me.btnRead.Size = New System.Drawing.Size(169, 58)
         Me.btnRead.TabIndex = 7
@@ -122,6 +122,8 @@ Partial Class UserMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.BackgroundImage = Global.PA_Kelompok2.My.Resources.Resources.CountryIndexFran
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.Panel4)

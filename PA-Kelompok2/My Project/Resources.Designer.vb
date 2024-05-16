@@ -73,6 +73,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property CountryIndexChekkos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CountryIndexChekkos", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CountryIndexFran() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CountryIndexFran", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property star() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("star", resourceCulture)

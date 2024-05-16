@@ -57,6 +57,8 @@ Partial Class AnimeRead
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.PA_Kelompok2.My.Resources.Resources.CountryIndexChekkos
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1230, 713)
         Me.Controls.Add(Me.btnDetail)
         Me.Controls.Add(Me.DataGridView1)

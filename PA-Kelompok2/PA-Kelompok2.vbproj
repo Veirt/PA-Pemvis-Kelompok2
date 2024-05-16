@@ -195,5 +195,11 @@
   <ItemGroup>
     <None Include="Resources\bg.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CountryIndexChekkos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CountryIndexFran.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
