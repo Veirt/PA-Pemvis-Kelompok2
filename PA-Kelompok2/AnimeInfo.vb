@@ -216,4 +216,83 @@ Public Class AnimeInfo
     Private Sub btnAddRev_Click(sender As Object, e As EventArgs) Handles btnAddRev.Click
         Review.Show()
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+    Private Sub printAnimeInfo_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
+        Dim graphics As Graphics = e.Graphics
+        Dim fontTitle As New Font("Segoe Ui", 25, FontStyle.Bold)
+        Dim fontSubTitle As New Font("Calibri", 20, FontStyle.Bold)
+        Dim fontInfo As New Font("Calibri", 15, FontStyle.Regular)
+        Dim fontSynopsis As New Font("Calibri", 15, FontStyle.Bold)
+        Dim formatTitle As New StringFormat()
+        formatTitle.Alignment = StringAlignment.Center
+
+        ' Print Judul "Anime77"
+        Dim titleRect As New RectangleF(e.PageBounds.Left, e.PageBounds.Top, e.PageBounds.Width, 50)
+        graphics.DrawString("Anime77", fontTitle, Brushes.Black, titleRect, formatTitle)
+
+        ' Print Garis Horizontal
+        Dim lineRect As New RectangleF(e.PageBounds.Left, titleRect.Bottom + 10, e.PageBounds.Width, 2)
+        graphics.DrawLine(Pens.Black, lineRect.Left, lineRect.Top, lineRect.Right, lineRect.Top)
+
+        ' Print Pster
+        Dim posterRect As New RectangleF(e.PageBounds.Left + 10, lineRect.Bottom + 20, 200, 300)
+        graphics.DrawImage(picboxPoster.Image, posterRect)
+
+        ' Print Judul Anime
+        Dim titleY As Single = lineRect.Bottom + 20
+        Dim titleX As Single = posterRect.Right + 20
+        Dim titleWidth As Single = e.PageBounds.Width - titleX - 20
+        Dim titleLineHeight As Single = graphics.MeasureString(lblTitle.Text, fontTitle).Height
+        graphics.DrawString(lblTitle.Text, fontTitle, Brushes.Black, New RectangleF(titleX, titleY, titleWidth, titleLineHeight))
+
+        ' Print Score
+        Dim scoreY As Single = titleY + titleLineHeight + 10
+        Dim scoreWidth As Single = titleWidth
+        Dim scoreLineHeight As Single = graphics.MeasureString("Score: " & lblScore.Text, fontSubTitle).Height
+        graphics.DrawString("Score: " & lblScore.Text, fontSubTitle, Brushes.Black, New RectangleF(titleX, scoreY, scoreWidth, scoreLineHeight))
+
+        ' Print Label Synopsis
+        Dim synopsisY As Single = scoreY + scoreLineHeight + 10
+        Dim synopsisWidth As Single = scoreWidth
+        Dim synopsisLineHeight As Single = graphics.MeasureString("Synopsis:", fontSynopsis).Height
+        graphics.DrawString("Synopsis:", fontSynopsis, Brushes.Black, New RectangleF(titleX, synopsisY, synopsisWidth, synopsisLineHeight))
+
+        ' Print teks Synopsis
+        Dim synopsisTextY As Single = synopsisY + synopsisLineHeight
+        Dim synopsisTextWidth As Single = synopsisWidth
+        Dim synopsisTextHeight As Single = graphics.MeasureString(lblSynopsis.Text, fontInfo).Height
+        graphics.DrawString(lblSynopsis.Text, fontInfo, Brushes.Black, New RectangleF(titleX, synopsisTextY, synopsisTextWidth, synopsisTextHeight))
+
+        ' Print Info Anime
+        Dim infoY As Single = synopsisTextY + synopsisTextHeight + 20
+        Dim infoX As Single = titleX
+        Dim infoWidth As Single = titleWidth
+        Dim infoHeight As Single = graphics.MeasureString("Episodes: " & lblEpisode.Text, fontInfo).Height
+        graphics.DrawString("Episodes: " & lblEpisode.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+
+        infoY += infoHeight
+        infoHeight = graphics.MeasureString("Status: " & lblStatus.Text, fontInfo).Height
+        graphics.DrawString("Status: " & lblStatus.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+
+        infoY += infoHeight
+        infoHeight = graphics.MeasureString("Year: " & lblYear.Text, fontInfo).Height
+        graphics.DrawString("Year: " & lblYear.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+
+        infoX += infoWidth / 2
+        infoY = synopsisTextY + synopsisTextHeight + 20
+        infoHeight = graphics.MeasureString("Season: " & lblSeason.Text, fontInfo).Height
+        graphics.DrawString("Season: " & lblSeason.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+
+        infoY += infoHeight
+        infoHeight = graphics.MeasureString("Studio: " & lblStudio.Text, fontInfo).Height
+        graphics.DrawString("Studio: " & lblStudio.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+
+        infoY += infoHeight
+        infoHeight = graphics.MeasureString("Genre: " & lblGenre.Text, fontInfo).Height
+        graphics.DrawString("Genre: " & lblGenre.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+    End Sub
 End Class

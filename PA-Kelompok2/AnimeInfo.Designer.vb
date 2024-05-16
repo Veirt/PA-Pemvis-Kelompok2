@@ -22,6 +22,7 @@ Partial Class AnimeInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnimeInfo))
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblSynopsis = New System.Windows.Forms.Label()
@@ -30,7 +31,7 @@ Partial Class AnimeInfo
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.flpReview = New System.Windows.Forms.Panel()
-        Me.Star = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblTotalReview = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -65,9 +66,12 @@ Partial Class AnimeInfo
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel2.SuspendLayout()
         Me.flpReview.SuspendLayout()
-        CType(Me.Star, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,7 +157,7 @@ Partial Class AnimeInfo
         'flpReview
         '
         Me.flpReview.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
-        Me.flpReview.Controls.Add(Me.Star)
+        Me.flpReview.Controls.Add(Me.PictureBox1)
         Me.flpReview.Controls.Add(Me.Label14)
         Me.flpReview.Controls.Add(Me.lblTotalReview)
         Me.flpReview.Controls.Add(Me.Label13)
@@ -166,15 +170,15 @@ Partial Class AnimeInfo
         Me.flpReview.Size = New System.Drawing.Size(548, 227)
         Me.flpReview.TabIndex = 7
         '
-        'Star
+        'PictureBox1
         '
-        Me.Star.Image = Global.PA_Kelompok2.My.Resources.Resources.star
-        Me.Star.Location = New System.Drawing.Point(9, 37)
-        Me.Star.Name = "Star"
-        Me.Star.Size = New System.Drawing.Size(22, 24)
-        Me.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Star.TabIndex = 42
-        Me.Star.TabStop = False
+        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.star
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 24)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 42
+        Me.PictureBox1.TabStop = False
         '
         'Label14
         '
@@ -526,12 +530,35 @@ Partial Class AnimeInfo
         Me.picboxPoster.TabIndex = 0
         Me.picboxPoster.TabStop = False
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnPrint.Location = New System.Drawing.Point(668, 21)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(84, 30)
+        Me.btnPrint.TabIndex = 39
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
         'AnimeInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(959, 698)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnAddRev)
@@ -563,12 +590,12 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.lblEpisode)
         Me.Controls.Add(Me.picboxPoster)
         Me.Name = "AnimeInfo"
-        Me.Text = "Anime77 - Anime Info"
+        Me.Text = "AnimeInfo"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.flpReview.ResumeLayout(False)
         Me.flpReview.PerformLayout()
-        CType(Me.Star, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -621,5 +648,8 @@ Partial Class AnimeInfo
     Friend WithEvents Label13 As Label
     Friend WithEvents lblCurrent As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Star As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
 End Class
