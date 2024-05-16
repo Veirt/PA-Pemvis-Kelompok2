@@ -9,7 +9,7 @@ Public Class AnimeRead
     End Sub
 
     Public Sub Read()
-        DA = New MySqlDataAdapter("SELECT * FROM anime", CONN)
+        DA = New MySqlDataAdapter("SELECT id, title, episodes, genre, status, season,year, studio FROM anime", CONN)
         DS = New DataSet
         DS.Clear()
         DA.Fill(DS, "anime")

@@ -35,10 +35,11 @@ Partial Class AnimeRead
         Me.DataGridView1.Location = New System.Drawing.Point(22, 70)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 150
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.RowTemplate.ReadOnly = True
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1219, 616)
+        Me.DataGridView1.Size = New System.Drawing.Size(1187, 616)
         Me.DataGridView1.TabIndex = 0
         '
         'btnDetail
@@ -56,7 +57,7 @@ Partial Class AnimeRead
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1278, 713)
+        Me.ClientSize = New System.Drawing.Size(1230, 713)
         Me.Controls.Add(Me.btnDetail)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "AnimeRead"
