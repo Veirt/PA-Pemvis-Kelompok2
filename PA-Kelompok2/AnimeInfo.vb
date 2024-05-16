@@ -41,6 +41,35 @@ Public Class AnimeInfo
         Return ranking
     End Function
 
+    Class ReviewRow
+        Public username
+        Public animeTitle
+        Public rating
+        Public comment
+    End Class
+
+    Public userReviews As New List(Of ReviewRow)()
+    Public currentReviewIdx = 0
+
+    Public Sub GetUserReviews(Id As String)
+        userReviews.Clear()
+
+        Dim query = $"SELECT * FROM reviews JOIN users ON reviews.id_user = users.id JOIN anime ON reviews.id_anime = anime.id WHERE id_anime = {Id}"
+        CMD = New MySqlCommand(query, CONN)
+        RD = CMD.ExecuteReader
+
+        While RD.Read()
+            Dim review = New ReviewRow()
+            review.username = RD("username")
+            review.animeTitle = RD("title")
+            review.rating = RD("rating")
+            review.comment = RD("comment")
+            userReviews.Add(review)
+        End While
+
+        RD.Close()
+    End Sub
+
     Public Sub FillData(id As String)
         CMD = New MySqlCommand($"SELECT * FROM anime WHERE id = {id}", CONN)
         RD = CMD.ExecuteReader
@@ -65,6 +94,36 @@ Public Class AnimeInfo
 
         lblScore.Text = GetAvgScore()
         lblRank.Text = GetRanking()
+
+        ' isi review nya
+        GetUserReviews(lblId.Text)
+        lblTotalReview.Text = userReviews.Count
+        lblUsername.Text = userReviews(currentReviewIdx).username
+        lblScoreUser.Text = userReviews(currentReviewIdx).rating
+        lblReview.Text = userReviews(currentReviewIdx).comment
+    End Sub
+
+    ' Modulus yang ada di VB beda sama yang ada di Python dan bahasa lain.
+    ' Ini workaround biar misal, -1 % 2 jadi 1 (di Python), bukan -1 kayak di VB
+    ' Intinya, fungsinya buat ngecycle list nya.
+    Private Function Modulus(ByVal x As Integer, ByVal m As Integer) As Integer
+        Return (x Mod m + m) Mod m
+    End Function
+
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        currentReviewIdx = Modulus(currentReviewIdx - 1, userReviews.Count)
+        lblCurrent.Text = currentReviewIdx + 1
+        lblUsername.Text = userReviews(currentReviewIdx).username
+        lblScoreUser.Text = userReviews(currentReviewIdx).rating
+        lblReview.Text = userReviews(currentReviewIdx).comment
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        currentReviewIdx = (currentReviewIdx + 1) Mod userReviews.Count
+        lblCurrent.Text = currentReviewIdx + 1
+        lblUsername.Text = userReviews(currentReviewIdx).username
+        lblScoreUser.Text = userReviews(currentReviewIdx).rating
+        lblReview.Text = userReviews(currentReviewIdx).comment
     End Sub
 
     Public Sub HideAndShowComponents()

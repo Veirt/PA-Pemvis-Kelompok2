@@ -22,7 +22,6 @@ Partial Class AnimeInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblSynopsis = New System.Windows.Forms.Label()
@@ -31,6 +30,10 @@ Partial Class AnimeInfo
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.flpReview = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblTotalReview = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblCurrent = New System.Windows.Forms.Label()
         Me.lblReview = New System.Windows.Forms.Label()
         Me.lblScoreUser = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
@@ -60,22 +63,15 @@ Partial Class AnimeInfo
         Me.btnAddRev = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.flpReview.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'picboxPoster
-        '
-        Me.picboxPoster.BackColor = System.Drawing.Color.Transparent
-        Me.picboxPoster.Location = New System.Drawing.Point(46, 86)
-        Me.picboxPoster.Name = "picboxPoster"
-        Me.picboxPoster.Size = New System.Drawing.Size(206, 300)
-        Me.picboxPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picboxPoster.TabIndex = 0
-        Me.picboxPoster.TabStop = False
         '
         'lblTitle
         '
@@ -157,6 +153,11 @@ Partial Class AnimeInfo
         'flpReview
         '
         Me.flpReview.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.flpReview.Controls.Add(Me.PictureBox1)
+        Me.flpReview.Controls.Add(Me.Label14)
+        Me.flpReview.Controls.Add(Me.lblTotalReview)
+        Me.flpReview.Controls.Add(Me.Label13)
+        Me.flpReview.Controls.Add(Me.lblCurrent)
         Me.flpReview.Controls.Add(Me.lblReview)
         Me.flpReview.Controls.Add(Me.lblScoreUser)
         Me.flpReview.Controls.Add(Me.lblUsername)
@@ -165,14 +166,49 @@ Partial Class AnimeInfo
         Me.flpReview.Size = New System.Drawing.Size(548, 227)
         Me.flpReview.TabIndex = 7
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(464, 202)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(67, 16)
+        Me.Label14.TabIndex = 41
+        Me.Label14.Text = "Review(s)"
+        '
+        'lblTotalReview
+        '
+        Me.lblTotalReview.AutoSize = True
+        Me.lblTotalReview.Location = New System.Drawing.Point(445, 202)
+        Me.lblTotalReview.Name = "lblTotalReview"
+        Me.lblTotalReview.Size = New System.Drawing.Size(13, 16)
+        Me.lblTotalReview.TabIndex = 40
+        Me.lblTotalReview.Text = "x"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(421, 202)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(18, 16)
+        Me.Label13.TabIndex = 39
+        Me.Label13.Text = "of"
+        '
+        'lblCurrent
+        '
+        Me.lblCurrent.AutoSize = True
+        Me.lblCurrent.Location = New System.Drawing.Point(401, 202)
+        Me.lblCurrent.Name = "lblCurrent"
+        Me.lblCurrent.Size = New System.Drawing.Size(14, 16)
+        Me.lblCurrent.TabIndex = 38
+        Me.lblCurrent.Text = "1"
+        '
         'lblReview
         '
-        Me.lblReview.AutoSize = True
         Me.lblReview.BackColor = System.Drawing.Color.Transparent
         Me.lblReview.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReview.Location = New System.Drawing.Point(6, 68)
+        Me.lblReview.Location = New System.Drawing.Point(9, 68)
         Me.lblReview.Name = "lblReview"
-        Me.lblReview.Size = New System.Drawing.Size(56, 18)
+        Me.lblReview.Size = New System.Drawing.Size(522, 122)
         Me.lblReview.TabIndex = 37
         Me.lblReview.Text = "Review"
         '
@@ -181,7 +217,7 @@ Partial Class AnimeInfo
         Me.lblScoreUser.AutoSize = True
         Me.lblScoreUser.BackColor = System.Drawing.Color.Transparent
         Me.lblScoreUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreUser.Location = New System.Drawing.Point(5, 32)
+        Me.lblScoreUser.Location = New System.Drawing.Point(37, 40)
         Me.lblScoreUser.Name = "lblScoreUser"
         Me.lblScoreUser.Size = New System.Drawing.Size(62, 22)
         Me.lblScoreUser.TabIndex = 36
@@ -470,6 +506,26 @@ Partial Class AnimeInfo
         Me.lblId.TabIndex = 38
         Me.lblId.Text = ":"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.star
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 24)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 42
+        Me.PictureBox1.TabStop = False
+        '
+        'picboxPoster
+        '
+        Me.picboxPoster.BackColor = System.Drawing.Color.Transparent
+        Me.picboxPoster.Location = New System.Drawing.Point(46, 86)
+        Me.picboxPoster.Name = "picboxPoster"
+        Me.picboxPoster.Size = New System.Drawing.Size(206, 300)
+        Me.picboxPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picboxPoster.TabIndex = 0
+        Me.picboxPoster.TabStop = False
+        '
         'AnimeInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -508,7 +564,6 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.picboxPoster)
         Me.Name = "AnimeInfo"
         Me.Text = "AnimeInfo"
-        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.flpReview.ResumeLayout(False)
@@ -517,6 +572,8 @@ Partial Class AnimeInfo
         Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -560,4 +617,9 @@ Partial Class AnimeInfo
     Friend WithEvents btnAddRev As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents lblId As Label
+    Friend WithEvents lblTotalReview As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents lblCurrent As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
