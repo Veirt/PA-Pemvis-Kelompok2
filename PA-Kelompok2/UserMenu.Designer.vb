@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UserMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnRead = New System.Windows.Forms.Button()
         Me.lblUser = New System.Windows.Forms.Label()
@@ -30,13 +30,14 @@ Partial Class UserMenu
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'btnRead
         '
         Me.btnRead.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.btnRead.ForeColor = System.Drawing.Color.White
-        Me.btnRead.Location = New System.Drawing.Point(295, 198)
+        Me.btnRead.Location = New System.Drawing.Point(326, 197)
         Me.btnRead.Name = "btnRead"
         Me.btnRead.Size = New System.Drawing.Size(169, 58)
         Me.btnRead.TabIndex = 7
@@ -101,12 +102,20 @@ Partial Class UserMenu
         '
         Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(655, 391)
+        Me.btnLogOut.Location = New System.Drawing.Point(666, 12)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(128, 41)
+        Me.btnLogOut.Size = New System.Drawing.Size(126, 38)
         Me.btnLogOut.TabIndex = 12
         Me.btnLogOut.Text = "Log Out"
         Me.btnLogOut.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel5.Location = New System.Drawing.Point(1, 50)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(802, 16)
+        Me.Panel5.TabIndex = 9
         '
         'UserMenu
         '
@@ -122,6 +131,7 @@ Partial Class UserMenu
         Me.Controls.Add(Me.btnRead)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel5)
         Me.MaximizeBox = False
         Me.Name = "UserMenu"
         Me.Text = "UserMenu"
@@ -138,4 +148,5 @@ Partial Class UserMenu
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents Panel5 As Panel
 End Class

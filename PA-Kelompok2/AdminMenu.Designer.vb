@@ -31,6 +31,7 @@ Partial Class AdminMenu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'lblWelcome
@@ -113,12 +114,20 @@ Partial Class AdminMenu
         '
         Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.btnLogOut.ForeColor = System.Drawing.Color.White
-        Me.btnLogOut.Location = New System.Drawing.Point(655, 391)
+        Me.btnLogOut.Location = New System.Drawing.Point(668, 12)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(128, 41)
+        Me.btnLogOut.Size = New System.Drawing.Size(124, 38)
         Me.btnLogOut.TabIndex = 16
         Me.btnLogOut.Text = "Log Out"
         Me.btnLogOut.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.Panel5.Location = New System.Drawing.Point(1, 51)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(802, 16)
+        Me.Panel5.TabIndex = 13
         '
         'AdminMenu
         '
@@ -135,6 +144,7 @@ Partial Class AdminMenu
         Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.lblAdmin)
         Me.Controls.Add(Me.lblWelcome)
+        Me.Controls.Add(Me.Panel5)
         Me.MaximizeBox = False
         Me.Name = "AdminMenu"
         Me.Text = "AdminMenu"
@@ -152,4 +162,5 @@ Partial Class AdminMenu
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents Panel5 As Panel
 End Class
