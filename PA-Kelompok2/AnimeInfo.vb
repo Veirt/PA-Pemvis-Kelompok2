@@ -203,7 +203,13 @@ Public Class AnimeInfo
         CMD.ExecuteNonQuery()
 
         SuccessMsg("Review berhasil dihapus!")
+
+        GetUserReviews(lblId.Text)
         ReloadData()
+        If userReviews.Count > 0 Then
+            btnPrev.PerformClick() ' ketika dihapus, trigger click previous.
+        End If
+        FillData(lblId.Text)
         HideAndShowComponents()
     End Sub
 
