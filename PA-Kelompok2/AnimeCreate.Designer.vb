@@ -265,7 +265,7 @@ Partial Class AnimeCreate
         Me.btnCreate.Text = "Create"
         Me.btnCreate.UseVisualStyleBackColor = False
         '
-        'Anime
+        'AnimeCreate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -292,8 +292,8 @@ Partial Class AnimeCreate
         Me.Controls.Add(Me.txtNamaAnime)
         Me.Controls.Add(Me.lblNamaAnime)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Anime"
-        Me.Text = "Form Anime"
+        Me.Name = "AnimeCreate"
+        Me.Text = "Anime77 - Create Anime"
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

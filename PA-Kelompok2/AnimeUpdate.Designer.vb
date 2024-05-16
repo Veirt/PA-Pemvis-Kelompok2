@@ -316,7 +316,7 @@ Partial Class AnimeUpdate
         Me.Controls.Add(Me.lblNamaAnime)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AnimeUpdate"
-        Me.Text = "Form Update"
+        Me.Text = "Anime77 - Update Anime"
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

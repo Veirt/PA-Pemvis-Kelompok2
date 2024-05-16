@@ -30,6 +30,7 @@ Partial Class AnimeInfo
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.flpReview = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblTotalReview = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -63,13 +64,12 @@ Partial Class AnimeInfo
         Me.btnAddRev = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.picboxPoster = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.flpReview.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -165,6 +165,16 @@ Partial Class AnimeInfo
         Me.flpReview.Name = "flpReview"
         Me.flpReview.Size = New System.Drawing.Size(548, 227)
         Me.flpReview.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.star
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 37)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(22, 24)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 42
+        Me.PictureBox1.TabStop = False
         '
         'Label14
         '
@@ -506,16 +516,6 @@ Partial Class AnimeInfo
         Me.lblId.TabIndex = 38
         Me.lblId.Text = ":"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.star
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 37)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(22, 24)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 42
-        Me.PictureBox1.TabStop = False
-        '
         'picboxPoster
         '
         Me.picboxPoster.BackColor = System.Drawing.Color.Transparent
@@ -563,16 +563,16 @@ Partial Class AnimeInfo
         Me.Controls.Add(Me.lblEpisode)
         Me.Controls.Add(Me.picboxPoster)
         Me.Name = "AnimeInfo"
-        Me.Text = "AnimeInfo"
+        Me.Text = "Anime77 - Anime Info"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.flpReview.ResumeLayout(False)
         Me.flpReview.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -103,7 +103,7 @@ Partial Class Review
         Me.MinimizeBox = False
         Me.Name = "Review"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Review Modal"
+        Me.Text = "Anime77 - Review Modal"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

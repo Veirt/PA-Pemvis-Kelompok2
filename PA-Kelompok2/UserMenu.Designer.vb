@@ -134,7 +134,7 @@ Partial Class UserMenu
         Me.Controls.Add(Me.Panel5)
         Me.MaximizeBox = False
         Me.Name = "UserMenu"
-        Me.Text = "UserMenu"
+        Me.Text = "Anime77 - User"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

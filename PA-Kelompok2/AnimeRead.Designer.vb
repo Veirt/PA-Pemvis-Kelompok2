@@ -61,7 +61,7 @@ Partial Class AnimeRead
         Me.Controls.Add(Me.btnDetail)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "AnimeRead"
-        Me.Text = "AnimeRead"
+        Me.Text = "Anime77 - Read Anime"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

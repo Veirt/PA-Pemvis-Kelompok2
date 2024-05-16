@@ -116,7 +116,7 @@ Partial Class AdminMenu
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.Name = "AdminMenu"
-        Me.Text = "AdminMenu"
+        Me.Text = "Anime77 - Admin"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
