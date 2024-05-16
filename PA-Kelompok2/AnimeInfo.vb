@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Drawing.Printing
+Imports System.IO
 Imports MySql.Data.MySqlClient
 
 Public Class AnimeInfo
@@ -170,9 +171,11 @@ Public Class AnimeInfo
         End If
     End Sub
 
-
     Private Sub AnimeInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideAndShowComponents()
+        PrintDocument1.DefaultPageSettings.Landscape = True
+        AddHandler PrintDocument1.PrintPage, AddressOf printAnimeInfo_PrintPage
+        Me.PrintPreviewDialog1.Document = Me.PrintDocument1
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -230,15 +233,23 @@ Public Class AnimeInfo
         Dim formatTitle As New StringFormat()
         formatTitle.Alignment = StringAlignment.Center
 
+        ' Membuat ketebalan
+        Dim thickPen As New Pen(Brushes.Black, 10) ' ketebalan
+
         ' Print Judul "Anime77"
         Dim titleRect As New RectangleF(e.PageBounds.Left, e.PageBounds.Top, e.PageBounds.Width, 50)
         graphics.DrawString("Anime77", fontTitle, Brushes.Black, titleRect, formatTitle)
 
-        ' Print Garis Horizontal
+        ' Print Garis
         Dim lineRect As New RectangleF(e.PageBounds.Left, titleRect.Bottom + 10, e.PageBounds.Width, 2)
-        graphics.DrawLine(Pens.Black, lineRect.Left, lineRect.Top, lineRect.Right, lineRect.Top)
+        graphics.DrawLine(thickPen, lineRect.Left, lineRect.Top, lineRect.Right, lineRect.Top)
+        Dim cornerLineLength As Single = 20
+        graphics.DrawLine(thickPen, e.PageBounds.Left, e.PageBounds.Top, e.PageBounds.Left + cornerLineLength, e.PageBounds.Top)
+        graphics.DrawLine(thickPen, e.PageBounds.Right - cornerLineLength, e.PageBounds.Top, e.PageBounds.Right, e.PageBounds.Top)
+        graphics.DrawLine(thickPen, e.PageBounds.Left, e.PageBounds.Bottom, e.PageBounds.Left + cornerLineLength, e.PageBounds.Bottom)
+        graphics.DrawLine(thickPen, e.PageBounds.Right - cornerLineLength, e.PageBounds.Bottom, e.PageBounds.Right, e.PageBounds.Bottom)
 
-        ' Print Pster
+        ' Print Poster
         Dim posterRect As New RectangleF(e.PageBounds.Left + 10, lineRect.Bottom + 20, 200, 300)
         graphics.DrawImage(picboxPoster.Image, posterRect)
 
@@ -249,7 +260,7 @@ Public Class AnimeInfo
         Dim titleLineHeight As Single = graphics.MeasureString(lblTitle.Text, fontTitle).Height
         graphics.DrawString(lblTitle.Text, fontTitle, Brushes.Black, New RectangleF(titleX, titleY, titleWidth, titleLineHeight))
 
-        ' Print Score
+        ' Print Score Anime
         Dim scoreY As Single = titleY + titleLineHeight + 10
         Dim scoreWidth As Single = titleWidth
         Dim scoreLineHeight As Single = graphics.MeasureString("Score: " & lblScore.Text, fontSubTitle).Height
@@ -261,11 +272,13 @@ Public Class AnimeInfo
         Dim synopsisLineHeight As Single = graphics.MeasureString("Synopsis:", fontSynopsis).Height
         graphics.DrawString("Synopsis:", fontSynopsis, Brushes.Black, New RectangleF(titleX, synopsisY, synopsisWidth, synopsisLineHeight))
 
-        ' Print teks Synopsis
+        ' Print Synopsis
         Dim synopsisTextY As Single = synopsisY + synopsisLineHeight
         Dim synopsisTextWidth As Single = synopsisWidth
-        Dim synopsisTextHeight As Single = graphics.MeasureString(lblSynopsis.Text, fontInfo).Height
-        graphics.DrawString(lblSynopsis.Text, fontInfo, Brushes.Black, New RectangleF(titleX, synopsisTextY, synopsisTextWidth, synopsisTextHeight))
+        Dim synopsisTextHeight As Single = graphics.MeasureString(lblSynopsis.Text, fontInfo, titleWidth).Height
+        Dim format As New StringFormat()
+        format.Trimming = StringTrimming.Word ' wrapping text
+        graphics.DrawString(lblSynopsis.Text, fontInfo, Brushes.Black, New RectangleF(titleX, synopsisTextY, synopsisTextWidth, synopsisTextHeight), format)
 
         ' Print Info Anime
         Dim infoY As Single = synopsisTextY + synopsisTextHeight + 20
@@ -291,8 +304,21 @@ Public Class AnimeInfo
         infoHeight = graphics.MeasureString("Studio: " & lblStudio.Text, fontInfo).Height
         graphics.DrawString("Studio: " & lblStudio.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
 
-        infoY += infoHeight
-        infoHeight = graphics.MeasureString("Genre: " & lblGenre.Text, fontInfo).Height
-        graphics.DrawString("Genre: " & lblGenre.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
+        ' Print genre
+        Dim genres As String() = lblGenre.Text.Split(","c)
+        Dim genreY As Single = infoY + infoHeight + 2
+        Dim genreX As Single = infoX
+        Dim genreWidth As Single = infoWidth
+        Dim genreHeight As Single = graphics.MeasureString(lblGenre.Text, fontInfo, titleWidth).Height
+        Dim formatGenre As New StringFormat()
+        formatGenre.Trimming = StringTrimming.Word 'wrap
+
+        graphics.DrawString("Genre: ", fontInfo, Brushes.Black, New RectangleF(genreX, genreY, genreWidth, genreHeight))
+
+        Dim genreText As String = String.Join(", ", genres)
+        Dim genreTextY As Single = genreY + genreHeight
+        graphics.DrawString(genreText, fontInfo, Brushes.Black, New RectangleF(genreX, genreTextY, genreWidth, genreHeight), formatGenre)
+
     End Sub
+
 End Class

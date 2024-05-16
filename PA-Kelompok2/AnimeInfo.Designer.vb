@@ -31,7 +31,7 @@ Partial Class AnimeInfo
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.flpReview = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Star = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblTotalReview = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -71,7 +71,7 @@ Partial Class AnimeInfo
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel2.SuspendLayout()
         Me.flpReview.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Star, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.picboxPoster, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,12 +99,11 @@ Partial Class AnimeInfo
         '
         'lblSynopsis
         '
-        Me.lblSynopsis.AutoSize = True
         Me.lblSynopsis.BackColor = System.Drawing.Color.Transparent
         Me.lblSynopsis.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSynopsis.Location = New System.Drawing.Point(3, 9)
         Me.lblSynopsis.Name = "lblSynopsis"
-        Me.lblSynopsis.Size = New System.Drawing.Size(69, 18)
+        Me.lblSynopsis.Size = New System.Drawing.Size(542, 166)
         Me.lblSynopsis.TabIndex = 6
         Me.lblSynopsis.Text = "Synopsis"
         '
@@ -157,7 +156,7 @@ Partial Class AnimeInfo
         'flpReview
         '
         Me.flpReview.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
-        Me.flpReview.Controls.Add(Me.PictureBox1)
+        Me.flpReview.Controls.Add(Me.Star)
         Me.flpReview.Controls.Add(Me.Label14)
         Me.flpReview.Controls.Add(Me.lblTotalReview)
         Me.flpReview.Controls.Add(Me.Label13)
@@ -170,15 +169,15 @@ Partial Class AnimeInfo
         Me.flpReview.Size = New System.Drawing.Size(548, 227)
         Me.flpReview.TabIndex = 7
         '
-        'PictureBox1
+        'Star
         '
-        Me.PictureBox1.Image = Global.PA_Kelompok2.My.Resources.Resources.star
-        Me.PictureBox1.Location = New System.Drawing.Point(9, 37)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(22, 24)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 42
-        Me.PictureBox1.TabStop = False
+        Me.Star.Image = Global.PA_Kelompok2.My.Resources.Resources.star
+        Me.Star.Location = New System.Drawing.Point(9, 37)
+        Me.Star.Name = "Star"
+        Me.Star.Size = New System.Drawing.Size(22, 24)
+        Me.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Star.TabIndex = 42
+        Me.Star.TabStop = False
         '
         'Label14
         '
@@ -542,6 +541,9 @@ Partial Class AnimeInfo
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
+        'PrintDocument1
+        '
+        '
         'PrintPreviewDialog1
         '
         Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -592,10 +594,9 @@ Partial Class AnimeInfo
         Me.Name = "AnimeInfo"
         Me.Text = "AnimeInfo"
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.flpReview.ResumeLayout(False)
         Me.flpReview.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Star, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -648,7 +649,7 @@ Partial Class AnimeInfo
     Friend WithEvents Label13 As Label
     Friend WithEvents lblCurrent As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Star As PictureBox
     Friend WithEvents btnPrint As Button
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
