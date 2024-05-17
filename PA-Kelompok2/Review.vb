@@ -29,6 +29,11 @@ Public Class Review
         Dim id_user As Integer = Session.UserId
         Dim id_anime As Integer = AnimeInfo.lblId.Text
 
+        If cmbRating.Text = Nothing Then
+            ErrorMsg("Silakan isi rating terlebih dahulu!")
+            Return
+        End If
+
         If Not String.IsNullOrEmpty(review) Then
             If HasExistingReview(id_user, id_anime) Then
                 ' Update existing review
