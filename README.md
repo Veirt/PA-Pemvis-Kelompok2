@@ -9,10 +9,10 @@
   - [x] Read individually
   - [x] Log out
 
-- [ ] User
+- [x] User
   - [x] Read all
-  - [ ] Read individually
-    - [ ] Create/Update/Delete Review
+  - [x] Read individually
+    - [x] Create/Update/Delete Review
   - [x] Log out
 
 Note:
