@@ -305,17 +305,16 @@ Public Class AnimeInfo
         graphics.DrawString("Studio: " & lblStudio.Text, fontInfo, Brushes.Black, New RectangleF(infoX, infoY, infoWidth, infoHeight))
 
         ' Print genre
-        Dim genres As String() = lblGenre.Text.Split(","c)
         Dim genreY As Single = infoY + infoHeight + 2
         Dim genreX As Single = infoX
-        Dim genreWidth As Single = infoWidth
+        Dim genreWidth As Single = infoWidth - 300
         Dim genreHeight As Single = graphics.MeasureString(lblGenre.Text, fontInfo, titleWidth).Height
         Dim formatGenre As New StringFormat()
         formatGenre.Trimming = StringTrimming.Word 'wrap
 
         graphics.DrawString("Genre: ", fontInfo, Brushes.Black, New RectangleF(genreX, genreY, genreWidth, genreHeight))
 
-        Dim genreText As String = String.Join(", ", genres)
+        Dim genreText As String = lblGenre.Text
         Dim genreTextY As Single = genreY + genreHeight
         graphics.DrawString(genreText, fontInfo, Brushes.Black, New RectangleF(genreX, genreTextY, genreWidth, genreHeight), formatGenre)
 

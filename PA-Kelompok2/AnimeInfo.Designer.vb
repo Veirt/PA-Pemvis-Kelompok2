@@ -79,6 +79,7 @@ Partial Class AnimeInfo
         '
         'lblTitle
         '
+        Me.lblTitle.AutoEllipsis = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.Location = New System.Drawing.Point(40, 36)
@@ -89,20 +90,23 @@ Partial Class AnimeInfo
         '
         'Panel2
         '
+        Me.Panel2.AutoScroll = True
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblSynopsis)
         Me.Panel2.Location = New System.Drawing.Point(384, 110)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(548, 186)
+        Me.Panel2.Size = New System.Drawing.Size(528, 186)
         Me.Panel2.TabIndex = 3
         '
         'lblSynopsis
         '
+        Me.lblSynopsis.AutoSize = True
         Me.lblSynopsis.BackColor = System.Drawing.Color.Transparent
         Me.lblSynopsis.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSynopsis.Location = New System.Drawing.Point(3, 9)
+        Me.lblSynopsis.MaximumSize = New System.Drawing.Size(500, 0)
         Me.lblSynopsis.Name = "lblSynopsis"
-        Me.lblSynopsis.Size = New System.Drawing.Size(542, 166)
+        Me.lblSynopsis.Size = New System.Drawing.Size(69, 18)
         Me.lblSynopsis.TabIndex = 6
         Me.lblSynopsis.Text = "Synopsis"
         '
@@ -590,6 +594,7 @@ Partial Class AnimeInfo
         Me.Name = "AnimeInfo"
         Me.Text = "AnimeInfo"
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.flpReview.ResumeLayout(False)
         Me.flpReview.PerformLayout()
         CType(Me.Star, System.ComponentModel.ISupportInitialize).EndInit()
