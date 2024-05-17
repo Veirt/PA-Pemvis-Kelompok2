@@ -79,12 +79,11 @@ Partial Class AnimeInfo
         '
         'lblTitle
         '
-        Me.lblTitle.AutoSize = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.Location = New System.Drawing.Point(40, 36)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(160, 32)
+        Me.lblTitle.Size = New System.Drawing.Size(907, 45)
         Me.lblTitle.TabIndex = 2
         Me.lblTitle.Text = "AnimeTitle"
         '
@@ -92,7 +91,7 @@ Partial Class AnimeInfo
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblSynopsis)
-        Me.Panel2.Location = New System.Drawing.Point(384, 86)
+        Me.Panel2.Location = New System.Drawing.Point(384, 110)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(548, 186)
         Me.Panel2.TabIndex = 3
@@ -123,7 +122,7 @@ Partial Class AnimeInfo
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(381, 63)
+        Me.Label8.Location = New System.Drawing.Point(381, 87)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 18)
         Me.Label8.TabIndex = 5
@@ -134,7 +133,7 @@ Partial Class AnimeInfo
         Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDelete.Location = New System.Drawing.Point(848, 21)
+        Me.btnDelete.Location = New System.Drawing.Point(848, 1)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(84, 30)
         Me.btnDelete.TabIndex = 26
@@ -146,7 +145,7 @@ Partial Class AnimeInfo
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdate.Location = New System.Drawing.Point(758, 21)
+        Me.btnUpdate.Location = New System.Drawing.Point(758, 1)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(84, 30)
         Me.btnUpdate.TabIndex = 25
@@ -164,7 +163,7 @@ Partial Class AnimeInfo
         Me.flpReview.Controls.Add(Me.lblReview)
         Me.flpReview.Controls.Add(Me.lblScoreUser)
         Me.flpReview.Controls.Add(Me.lblUsername)
-        Me.flpReview.Location = New System.Drawing.Point(384, 378)
+        Me.flpReview.Location = New System.Drawing.Point(384, 394)
         Me.flpReview.Name = "flpReview"
         Me.flpReview.Size = New System.Drawing.Size(548, 227)
         Me.flpReview.TabIndex = 7
@@ -362,7 +361,7 @@ Partial Class AnimeInfo
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.Panel1.Controls.Add(Me.lblRank)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Location = New System.Drawing.Point(514, 298)
+        Me.Panel1.Location = New System.Drawing.Point(512, 318)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(143, 50)
         Me.Panel1.TabIndex = 27
@@ -396,7 +395,7 @@ Partial Class AnimeInfo
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.Panel4.Controls.Add(Me.lblScore)
         Me.Panel4.Controls.Add(Me.Label10)
-        Me.Panel4.Location = New System.Drawing.Point(673, 298)
+        Me.Panel4.Location = New System.Drawing.Point(671, 318)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(143, 50)
         Me.Panel4.TabIndex = 28
@@ -430,7 +429,7 @@ Partial Class AnimeInfo
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(381, 353)
+        Me.Label11.Location = New System.Drawing.Point(381, 369)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(64, 18)
         Me.Label11.TabIndex = 29
@@ -439,7 +438,7 @@ Partial Class AnimeInfo
         'btnPrev
         '
         Me.btnPrev.BackColor = System.Drawing.Color.LightGray
-        Me.btnPrev.Location = New System.Drawing.Point(384, 611)
+        Me.btnPrev.Location = New System.Drawing.Point(384, 627)
         Me.btnPrev.Name = "btnPrev"
         Me.btnPrev.Size = New System.Drawing.Size(60, 23)
         Me.btnPrev.TabIndex = 31
@@ -449,7 +448,7 @@ Partial Class AnimeInfo
         'btnNext
         '
         Me.btnNext.BackColor = System.Drawing.Color.LightGray
-        Me.btnNext.Location = New System.Drawing.Point(872, 611)
+        Me.btnNext.Location = New System.Drawing.Point(872, 627)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(60, 23)
         Me.btnNext.TabIndex = 32
@@ -461,7 +460,7 @@ Partial Class AnimeInfo
         Me.btnDeleteRev.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.btnDeleteRev.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteRev.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnDeleteRev.Location = New System.Drawing.Point(661, 611)
+        Me.btnDeleteRev.Location = New System.Drawing.Point(661, 627)
         Me.btnDeleteRev.Name = "btnDeleteRev"
         Me.btnDeleteRev.Size = New System.Drawing.Size(79, 32)
         Me.btnDeleteRev.TabIndex = 34
@@ -473,7 +472,7 @@ Partial Class AnimeInfo
         Me.btnUpdateRev.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.btnUpdateRev.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdateRev.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdateRev.Location = New System.Drawing.Point(576, 611)
+        Me.btnUpdateRev.Location = New System.Drawing.Point(576, 627)
         Me.btnUpdateRev.Name = "btnUpdateRev"
         Me.btnUpdateRev.Size = New System.Drawing.Size(79, 32)
         Me.btnUpdateRev.TabIndex = 33
@@ -494,7 +493,7 @@ Partial Class AnimeInfo
         Me.btnAddRev.BackColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(135, Byte), Integer))
         Me.btnAddRev.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddRev.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAddRev.Location = New System.Drawing.Point(377, 640)
+        Me.btnAddRev.Location = New System.Drawing.Point(377, 656)
         Me.btnAddRev.Name = "btnAddRev"
         Me.btnAddRev.Size = New System.Drawing.Size(112, 32)
         Me.btnAddRev.TabIndex = 36
@@ -534,15 +533,12 @@ Partial Class AnimeInfo
         Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(61, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnPrint.Location = New System.Drawing.Point(668, 21)
+        Me.btnPrint.Location = New System.Drawing.Point(668, 1)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(84, 30)
         Me.btnPrint.TabIndex = 39
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
-        '
-        'PrintDocument1
-        '
         '
         'PrintPreviewDialog1
         '
