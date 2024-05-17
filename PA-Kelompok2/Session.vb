@@ -7,5 +7,7 @@ Module Session
         Session.UserId = Nothing
         Session.Username = Nothing
         Session.Role = Nothing
+        Login.txtUsername.Text = Nothing
+        Login.txtPassword.Text = Nothing
     End Sub
 End Module
